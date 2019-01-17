@@ -1,0 +1,45 @@
+body {
+    padding: 1em;
+}
+
+.container {
+    background-color: #ddd;
+    width: 400px;
+    margin: auto;
+}
+.container+.container, .container1{
+    margin-top: 1em;
+    /* position: relative; */
+    /* height: 58px; */
+}
+
+.red-box {
+    background-color: red;
+    height: 50px;
+    width: 100px;
+    padding: 0.2em;
+}
+
+.red-box.with-margin {
+    /* margin left move the red box 50% of container size (200px) from the initial place in container */
+    margin-left: 50%;  
+}
+
+.red-box.with-transform {
+    /* transform move the red box 50% of the red box size (50px) from the initial place in container */
+    /* position: absolute; */
+    /* position: absolute; */
+    /* left: 50%; */
+    transform: translateX(50%);
+}
+
+.container1 {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    background: #111;
+}
+
+img {
+    margin: auto;
+}
