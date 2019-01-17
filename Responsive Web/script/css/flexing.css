@@ -1,0 +1,122 @@
+body {
+    padding: 20px;
+    font-size: 1em;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* First, Second Third */
+.container {
+    width: 500px;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: .5em;
+    border: 5px solid rgb(100, 200, 100);
+}
+
+.container + .container {
+    margin-top: 1em;
+}
+
+.item {
+    padding: 10px;
+    flex: 1 1 auto;
+    border: 3px solid rgba(100, 220, 100, .7);
+    background-color: rgba(100, 220, 100, .5);
+}
+
+.item-x {
+    flex: 1 1 150px;
+}
+
+/* Fourth */
+.tags {
+    padding: .5em 0;
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    border-radius: .5em;
+    border: 5px solid rgba(100, 200, 100);
+    /* justify-content: center; */
+}
+
+.tags li {
+    color: #ffffff;
+    margin: .2em .4em;
+    padding: .2em .4em;
+    border-radius: .2em;
+    background-color: rgba(100,200,100);
+}
+
+/* Fifth */
+.xontainer {
+    width: 40vw;
+    height: 40vh;
+    display: flex;
+    border-radius: .5em;    
+    align-items: center;
+    justify-content: center;
+    border: 5px solid rgb(100, 200, 100);
+}
+
+.itemx {
+    padding: 1em;
+    color: #ffffff;
+    border-radius: .5em;
+    background-color: rgb(100, 200, 100);
+}
+
+/* Sixth */
+.fields {
+    display: flex;
+    padding: 1em;
+    margin-top: 1em;
+    align-items: center;
+    border-radius: .5em;
+    border: 5px solid rgb(100, 200, 100); 
+}
+
+input[type="search"] {
+    width: 100%;
+    padding: .2em;
+    font-size: 130%;
+    margin: 0 0 0 1em;
+}
+
+label {
+    font-size: 130%;
+    padding-left: .2em;
+}
+
+input[type="submit"] {
+    padding: .2em;
+    font-size: 130%;
+    border: 3px solid rgb(100, 200, 100);
+    background-color: rgba(100, 220, 100, .5);
+}
+
+/* Seventh */
+.layout {
+    width: 25vw;
+    height: 40vh;
+    display: flex;
+    margin-top: 1em;
+    font-size: 150%;
+    border-radius: .5em;
+    flex-direction: column;
+    border: 5px solid rgb(100, 200, 100);
+}
+
+.content {
+    flex: 1;
+    padding: .5em;
+}
+
+.header, .footer {
+    padding: .5em;
+    background-color: rgba(100, 220, 100, .5);
+}
