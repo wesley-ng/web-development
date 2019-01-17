@@ -80,7 +80,7 @@ body {
     border: 5px solid rgb(100, 200, 100); 
 }
 
-input[type="text"] {
+input[type="search"] {
     width: 100%;
     padding: .2em;
     font-size: 130%;
