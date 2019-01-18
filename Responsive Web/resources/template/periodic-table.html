@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Periodic Table</title>
+    <link rel="stylesheet" href="../../script/css/periodic-table.css">
+</head>
+<body>
+    <div class="container">
+        <div class="wrapper">
+            <h1 class="title">Periodic Table</h1>
+            <ol class="top-table">
+                <li class="atom atom-1 nonmetal">
+                    <span class="atomic-number">1</span>
+                    <abbr title="">H</abbr>
+                    <span class="atomic-name">Hydrogen</span>
+                </li>
+                <li class="atom atom-2 noble-gas">
+                    <span class="atomic-number">2</span>
+                    <abbr title="">He</abbr>
+                    <span class="atomic-name">Helium</span>
+                </li>
+                <li class="atom atom-3 alkali-metal">
+                    <span class="atomic-number">3</span>
+                    <abbr title="">Li</abbr>
+                    <span class="atomic-name">Lithium</span>
+                </li>
+                <li class="atom atom-4 alkaline-earth">
+                    <span class="atomic-number">4</span>
+                    <abbr title="">Be</abbr>
+                    <span class="atomic-name">Beryllium</span>
+                </li>
+                <li class="atom atom-5 metalloid">
+                    <span class="atomic-number">5</span>
+                    <abbr title="">B</abbr>
+                    <span class="atomic-name">Boron</span>
+                </li>
+                <li class="atom atom-6 nonmetal">
+                    <span class="atomic-number">6</span>
+                    <abbr title="">C</abbr>
+                    <span class="atomic-name">Carbon</span>
+                </li>
+                <li class="atom atom-7 nonmetal">
+                    <span class="atomic-number">7</span>
+                    <abbr title="">N</abbr>
+                    <span class="atomic-name">Nitrogen</span>
+                </li>
+                <li class="atom atom-8 nonmetal">
+                    <span class="atomic-number">8</span>
+                    <abbr title="">O</abbr>
+                    <span class="atomic-name">Oxygen</span>
+                </li>
+                <li class="atom atom-9 halogen">
+                    <span class="atomic-number">9</span>
+                    <abbr title="">F</abbr>
+                    <span class="atomic-name">Fluorine</span>
+                </li>
+                <li class="atom atom-10 noble-gas">
+                    <span class="atomic-number">10</span>
+                    <abbr title="">Ne</abbr>
+                    <span class="atomic-name">Neon</span>
+                </li>
+                <li class="atom atom-11 alkali-metal">
+                    <span class="atomic-number">11</span>
+                    <abbr title="">Na</abbr>
+                    <span class="atomic-name">Sodium</span>
+                </li>
+                <li class="atom atom-12 alkaline-earth">
+                    <span class="atomic-number">12</span>
+                    <abbr title="">Mg</abbr>
+                    <span class="atomic-name">Magnesium</span>
+                </li>
+                <li class="atom atom-13 basic-metal">
+                    <span class="atomic-number">13</span>
+                    <abbr title="">Al</abbr>
+                    <span class="atomic-name">Aluminium</span>
+                </li>
+                <li class="atom atom-14 metalloid">
+                    <span class="atomic-number">14</span>
+                    <abbr title="">Si</abbr>
+                    <span class="atomic-name">Silicon</span>
+                </li>
+                <li class="atom atom-15 nonmetal">
+                    <span class="atomic-number">15</span>
+                    <abbr title="">P</abbr>
+                    <span class="atomic-name">Phosphor</span>
+                </li>
+                <li class="atom atom-16 nonmetal">
+                    <span class="atomic-number">16</span>
+                    <abbr title="">S</abbr>
+                    <span class="atomic-name">Sulfur</span>
+                </li>
+                <li class="atom atom-17 halogen">
+                    <span class="atomic-number">17</span>
+                    <abbr title="">Cl</abbr>
+                    <span class="atomic-name">Chlorine</span>
+                </li>
+                <li class="atom atom-18 noble-gas">
+                    <span class="atomic-number">18</span>
+                    <abbr title="">Ar</abbr>
+                    <span class="atomic-name">Argon</span>
+                </li>
+                <li class="atom atom-19 alkali-metal">
+                    <span class="atomic-number">19</span>
+                    <abbr title="">K</abbr>
+                    <span class="atomic-name">Potassium</span>
+                </li>
+                <li class="atom atom-20 alkaline-earth">
+                    <span class="atomic-number">20</span>
+                    <abbr title="">Ca</abbr>
+                    <span class="atomic-name">Calcium</span>
+                </li>
+                <li class="atom atom-21 transition-metal">
+                    <span class="atomic-number">21</span>
+                    <abbr title="">Sc</abbr>
+                    <span class="atomic-name">Scandium</span>
+                </li>
+                <li class="atom atom-22 transition-metal">
+                    <span class="atomic-number">22</span>
+                    <abbr title="">Ti</abbr>
+                    <span class="atomic-name">Titanium</span>
+                </li>
+                <li class="atom atom-23 transition-metal">
+                    <span class="atomic-number">23</span>
+                    <abbr title="">V</abbr>
+                    <span class="atomic-name">Vanadium</span>
+                </li>
+                <li class="atom atom-24 transition-metal">
+                    <span class="atomic-number">24</span>
+                    <abbr title="">Cr</abbr>
+                    <span class="atomic-name">Chromium</span>
+                </li>
+                <li class="atom atom-25 transition-metal">
+                    <span class="atomic-number">25</span>
+                    <abbr title="">Mn</abbr>
+                    <span class="atomic-name">Manganese</span>
+                </li>
+                <li class="atom atom-26 transition-metal">
+                    <span class="atomic-number">26</span>
+                    <abbr title="">Fe</abbr>
+                    <span class="atomic-name">Iron</span>
+                </li>
+                <li class="atom atom-27 transition-metal">
+                    <span class="atomic-number">27</span>
+                    <abbr title="">Co</abbr>
+                    <span class="atomic-name">Cobalt</span>
+                </li>
+                <li class="atom atom-28 transition-metal">
+                    <span class="atomic-number">28</span>
+                    <abbr title="">Ni</abbr>
+                    <span class="atomic-name">Nickel</span>
+                </li>
+                <li class="atom atom-29 transition-metal">
+                    <span class="atomic-number">29</span>
+                    <abbr title="">Cu</abbr>
+                    <span class="atomic-name">Copper</span>
+                </li>
+                <li class="atom atom-30 transition-metal">
+                    <span class="atomic-number">30</span>
+                    <abbr title="">Zn</abbr>
+                    <span class="atomic-name">Zinc</span>
+                </li>
+                <li class="atom atom-31 basic-metal">
+                    <span class="atomic-number">31</span>
+                    <abbr title="">Ga</abbr>
+                    <span class="atomic-name">Gallium</span>
+                </li>
+                <li class="atom atom-32 metalloid">
+                    <span class="atomic-number">32</span>
+                    <abbr title="">Ge</abbr>
+                    <span class="atomic-name">Germanium</span>
+                </li>
+                <li class="atom atom-33 metalloid">
+                    <span class="atomic-number">33</span>
+                    <abbr title="">As</abbr>
+                    <span class="atomic-name">Arsenic</span>
+                </li>
+                <li class="atom atom-34 nonmetal">
+                    <span class="atomic-number">34</span>
+                    <abbr title="">Se</abbr>
+                    <span class="atomic-name">Selenium</span>
+                </li>
+                <li class="atom atom-35 halogen">
+                    <span class="atomic-number">35</span>
+                    <abbr title="">Br</abbr>
+                    <span class="atomic-name">Bromine</span>
+                </li>
+                <li class="atom atom-36 noble-gas">
+                    <span class="atomic-number">36</span>
+                    <abbr title="">Kr</abbr>
+                    <span class="atomic-name">Krypton</span>
+                </li>
+                <li class="atom atom-37 alkali-metal">
+                    <span class="atomic-number">37</span>
+                    <abbr title="">Rb</abbr>
+                    <span class="atomic-name">Rubidium</span>
+                </li>
+                <li class="atom atom-38 alkaline-earth">
+                    <span class="atomic-number">38</span>
+                    <abbr title="">Sr</abbr>
+                    <span class="atomic-name">Strontium</span>
+                </li>
+                <li class="atom atom-39 transition-metal">
+                    <span class="atomic-number">39</span>
+                    <abbr title="">Y</abbr>
+                    <span class="atomic-name">Yttrium</span>
+                </li>
+                <li class="atom atom-40 transition-metal">
+                    <span class="atomic-number">40</span>
+                    <abbr title="">Zr</abbr>
+                    <span class="atomic-name">Zirconium</span>
+                </li>
+                <li class="atom atom-41 transition-metal">
+                    <span class="atomic-number">41</span>
+                    <abbr title="">Nb</abbr>
+                    <span class="atomic-name">Niobium</span>
+                </li>
+                <li class="atom atom-42 transition-metal">
+                    <span class="atomic-number">42</span>
+                    <abbr title="">Mo</abbr>
+                    <span class="atomic-name">Molybdenum</span>
+                </li>
+                <li class="atom atom-43 transition-metal">
+                    <span class="atomic-number">43</span>
+                    <abbr title="">Tc</abbr>
+                    <span class="atomic-name">Technetium</span>
+                </li>
+                <li class="atom atom-44 transition-metal">
+                    <span class="atomic-number">44</span>
+                    <abbr title="">Ru</abbr>
+                    <span class="atomic-name">Ruthenium</span>
+                </li>
+                <li class="atom atom-45 transition-metal">
+                    <span class="atomic-number">45</span>
+                    <abbr title="">Rh</abbr>
+                    <span class="atomic-name">Rhodium</span>
+                </li>
+                <li class="atom atom-46 transition-metal">
+                    <span class="atomic-number">46</span>
+                    <abbr title="">Pd</abbr>
+                    <span class="atomic-name">Palladium</span>
+                </li>
+                <li class="atom atom-47 transition-metal">
+                    <span class="atomic-number">47</span>
+                    <abbr title="">Ag</abbr>
+                    <span class="atomic-name">Silver</span>
+                </li>
+                <li class="atom atom-48 transition-metal">
+                    <span class="atomic-number">48</span>
+                    <abbr title="">Cd</abbr>
+                    <span class="atomic-name">Cadmium</span>
+                </li>
+                <li class="atom atom-49 basic-metal">
+                    <span class="atomic-number">49</span>
+                    <abbr title="">In</abbr>
+                    <span class="atomic-name">Indium</span>
+                </li>
+                <li class="atom atom-50 basic-metal">
+                    <span class="atomic-number">50</span>
+                    <abbr title="">Sn</abbr>
+                    <span class="atomic-name">Tin</span>
+                </li>
+                <li class="atom atom-51 metalloid">
+                    <span class="atomic-number">51</span>
+                    <abbr title="">Sb</abbr>
+                    <span class="atomic-name">Antimony</span>
+                </li>
+                <li class="atom atom-52 metalloid">
+                    <span class="atomic-number">52</span>
+                    <abbr title="">Te</abbr>
+                    <span class="atomic-name">Tellurium</span>
+                </li>
+                <li class="atom atom-53 halogen">
+                    <span class="atomic-number">53</span>
+                    <abbr title="">I</abbr>
+                    <span class="atomic-name">Iodine</span>
+                </li>
+                <li class="atom atom-54 noble-gas">
+                    <span class="atomic-number">54</span>
+                    <abbr title="">Xe</abbr>
+                    <span class="atomic-name">Xenon</span>
+                </li>
+                <li class="atom atom-55 alkali-metal">
+                    <span class="atomic-number">55</span>
+                    <abbr title="">Cs</abbr>
+                    <span class="atomic-name">Cesium</span>
+                </li>
+                <li class="atom atom-56 alkaline-earth">
+                    <span class="atomic-number">56</span>
+                    <abbr title="">Ba</abbr>
+                    <span class="atomic-name">Barium</span>
+                </li>
+                <li class="atom atom-57-71 lanthanide">
+                    <span class="atomic-number">57-71</span>
+                    <abbr title=""></abbr>
+                    <span class="atomic-name"></span>
+                </li>
+                <li class="atom atom-72 transition-metal">
+                    <span class="atomic-number">72</span>
+                    <abbr title="">Hf</abbr>
+                    <span class="atomic-name">Hafnium</span>
+                </li>
+                <li class="atom atom-73 transition-metal">
+                    <span class="atomic-number">73</span>
+                    <abbr title="">Ta</abbr>
+                    <span class="atomic-name">Tantalum</span>
+                </li>
+                <li class="atom atom-74 transition-metal">
+                    <span class="atomic-number">74</span>
+                    <abbr title="">W</abbr>
+                    <span class="atomic-name">Tungsten</span>
+                </li>
+                <li class="atom atom-75 transition-metal">
+                    <span class="atomic-number">75</span>
+                    <abbr title="">Re</abbr>
+                    <span class="atomic-name">Rhenium</span>
+                </li>
+                <li class="atom atom-76 transition-metal">
+                    <span class="atomic-number">76</span>
+                    <abbr title="">Os</abbr>
+                    <span class="atomic-name">Osmium</span>
+                </li>
+                <li class="atom atom-77 transition-metal">
+                    <span class="atomic-number">77</span>
+                    <abbr title="">Ir</abbr>
+                    <span class="atomic-name">Iridium</span>
+                </li>
+                <li class="atom atom-78 transition-metal">
+                    <span class="atomic-number">78</span>
+                    <abbr title="">Pt</abbr>
+                    <span class="atomic-name">Platinum</span>
+                </li>
+                <li class="atom atom-79 transition-metal">
+                    <span class="atomic-number">79</span>
+                    <abbr title="">Au</abbr>
+                    <span class="atomic-name">Gold</span>
+                </li>
+                <li class="atom atom-80 transition-metal">
+                    <span class="atomic-number">80</span>
+                    <abbr title="">Hg</abbr>
+                    <span class="atomic-name">Mercury</span>
+                </li>
+                <li class="atom atom-81 basic-metal">
+                    <span class="atomic-number">81</span>
+                    <abbr title="">Tl</abbr>
+                    <span class="atomic-name">Thallium</span>
+                </li>
+                <li class="atom atom-82 basic-metal">
+                    <span class="atomic-number">82</span>
+                    <abbr title="">Pb</abbr>
+                    <span class="atomic-name">Lead</span>
+                </li>
+                <li class="atom atom-83 basic-metal">
+                    <span class="atomic-number">83</span>
+                    <abbr title="">Bi</abbr>
+                    <span class="atomic-name">Bismuth</span>
+                </li>
+                <li class="atom atom-84 metalloid">
+                    <span class="atomic-number">84</span>
+                    <abbr title="">Po</abbr>
+                    <span class="atomic-name">Polonium</span>
+                </li>
+                <li class="atom atom-85 halogen">
+                    <span class="atomic-number">85</span>
+                    <abbr title="">At</abbr>
+                    <span class="atomic-name">Astatine</span>
+                </li>
+                <li class="atom atom-86 noble-gas">
+                    <span class="atomic-number">86</span>
+                    <abbr title="">Rn</abbr>
+                    <span class="atomic-name">Radon</span>
+                </li>
+                <li class="atom atom-87 alkali-metal">
+                    <span class="atomic-number">87</span>
+                    <abbr title="">Fr</abbr>
+                    <span class="atomic-name">Francium</span>
+                </li>
+                <li class="atom atom-88 alkaline-earth">
+                    <span class="atomic-number">88</span>
+                    <abbr title="">Ra</abbr>
+                    <span class="atomic-name">Radium</span>
+                </li>
+                <li class="atom atom-89-103 actinide">
+                    <span class="atomic-number">89-103</span>
+                    <abbr title=""></abbr>
+                    <span class="atomic-name"></span>
+                </li>
+                <li class="atom atom-104 transition-metal">
+                    <span class="atomic-number">104</span>
+                    <abbr title="">Rf</abbr>
+                    <span class="atomic-name">Rutherfordium</span>
+                </li>
+                <li class="atom atom-105 transition-metal">
+                    <span class="atomic-number">105</span>
+                    <abbr title="">Db</abbr>
+                    <span class="atomic-name">Dubnium</span>
+                </li>
+                <li class="atom atom-106 transition-metal">
+                    <span class="atomic-number">106</span>
+                    <abbr title="">Sg</abbr>
+                    <span class="atomic-name">Seaborgium</span>
+                </li>
+                <li class="atom atom-107 transition-metal">
+                    <span class="atomic-number">107</span>
+                    <abbr title="">Bh</abbr>
+                    <span class="atomic-name">Bohrium</span>
+                </li>
+                <li class="atom atom-108 transition-metal">
+                    <span class="atomic-number">108</span>
+                    <abbr title="">Hs</abbr>
+                    <span class="atomic-name">Hassium</span>
+                </li>
+                <li class="atom atom-109 transition-metal">
+                    <span class="atomic-number">109</span>
+                    <abbr title="">Mt</abbr>
+                    <span class="atomic-name">Meitnerium</span>
+                </li>
+                <li class="atom atom-110 transition-metal">
+                    <span class="atomic-number">110</span>
+                    <abbr title="">Ds</abbr>
+                    <span class="atomic-name">Darmstadtium</span>
+                </li>
+                <li class="atom atom-111 transition-metal">
+                    <span class="atomic-number">111</span>
+                    <abbr title="">Rg</abbr>
+                    <span class="atomic-name">Roentgenium</span>
+                </li>
+                <li class="atom atom-112 transition-metal">
+                    <span class="atomic-number">112</span>
+                    <abbr title="">Cn</abbr>
+                    <span class="atomic-name">Copernicium</span>
+                </li>
+                <li class="atom atom-113 basic-metal">
+                    <span class="atomic-number">113</span>
+                    <abbr title="">Nh</abbr>
+                    <span class="atomic-name">Nihonium</span>
+                </li>
+                <li class="atom atom-114 basic-metal">
+                    <span class="atomic-number">114</span>
+                    <abbr title="">Fl</abbr>
+                    <span class="atomic-name">Flerovium</span>
+                </li>
+                <li class="atom atom-115 basic-metal">
+                    <span class="atomic-number">115</span>
+                    <abbr title="">Mc</abbr>
+                    <span class="atomic-name">Moscovium</span>
+                </li>
+                <li class="atom atom-116 basic-metal">
+                    <span class="atomic-number">116</span>
+                    <abbr title="">Lv</abbr>
+                    <span class="atomic-name">Livermorium</span>
+                </li>
+                <li class="atom atom-117 halogen">
+                    <span class="atomic-number">117</span>
+                    <abbr title="">Ts</abbr>
+                    <span class="atomic-name">Tennessine</span>
+                </li>
+                <li class="atom atom-118 noble-gas">
+                    <span class="atomic-number">118</span>
+                    <abbr title="">Og</abbr>
+                    <span class="atomic-name">Oganesson</span>
+                </li>
+            </ol>
+        </div>
+        <div class="wrapper-2">
+            <ol class="bot-table">
+                <li class="atom atom-57 lanthanide">
+                    <span class="number">57</span>
+                    <abbr title="">La</abbr>
+                    <span class="atomic-name">Lanthanum</span>
+                </li>
+                <li class="atom atom-58 lanthanide">
+                    <span class="number">58</span>
+                    <abbr title="">Ce</abbr>
+                    <span class="atomic-name">Cerium</span>
+                </li>
+                <li class="atom atom-59 lanthanide">
+                    <span class="number">59</span>
+                    <abbr title="">Pr</abbr>
+                    <span class="atomic-name">Praseodymium</span>
+                </li>
+                <li class="atom atom-60 lanthanide">
+                    <span class="number">60</span>
+                    <abbr title="">Nd</abbr>
+                    <span class="atomic-name">Neodymium</span>
+                </li>
+                <li class="atom atom-61 lanthanide">
+                    <span class="number">61</span>
+                    <abbr title="">Pm</abbr>
+                    <span class="atomic-name">Promethium</span>
+                </li>
+                <li class="atom atom-62 lanthanide">
+                    <span class="number">62</span>
+                    <abbr title="">Sm</abbr>
+                    <span class="atomic-name">Samarium</span>
+                </li>
+                <li class="atom atom-63 lanthanide">
+                    <span class="number">63</span>
+                    <abbr title="">Eu</abbr>
+                    <span class="atomic-name">Europium</span>
+                </li>
+                <li class="atom atom-64 lanthanide">
+                    <span class="number">64</span>
+                    <abbr title="">Gd</abbr>
+                    <span class="atomic-name">Gadolinium</span>
+                </li>
+                <li class="atom atom-65 lanthanide">
+                    <span class="number">65</span>
+                    <abbr title="">Tb</abbr>
+                    <span class="atomic-name">Terbium</span>
+                </li>
+                <li class="atom atom-66 lanthanide">
+                    <span class="number">66</span>
+                    <abbr title="">Dy</abbr>
+                    <span class="atomic-name">Dysprosium</span>
+                </li>
+                <li class="atom atom-67 lanthanide">
+                    <span class="number">67</span>
+                    <abbr title="">Ho</abbr>
+                    <span class="atomic-name">Holmium</span>
+                </li>
+                <li class="atom atom-68 lanthanide">
+                    <span class="number">68</span>
+                    <abbr title="">Er</abbr>
+                    <span class="atomic-name">Erbium</span>
+                </li>
+                <li class="atom atom-69 lanthanide">
+                    <span class="number">69</span>
+                    <abbr title="">Tm</abbr>
+                    <span class="atomic-name">Thulium</span>
+                </li>
+                <li class="atom atom-70 lanthanide">
+                    <span class="number">70</span>
+                    <abbr title="">Yb</abbr>
+                    <span class="atomic-name">Ytterbium</span>
+                </li>
+                <li class="atom atom-71 lanthanide">
+                    <span class="number">71</span>
+                    <abbr title="">Lu</abbr>
+                    <span class="atomic-name">Lutetium</span>
+                </li>
+                <li class="atom atom-89 actinide">
+                    <span class="number">89</span>
+                    <abbr title="">Ac</abbr>
+                    <span class="atomic-name">Actinium</span>
+                </li>
+                <li class="atom atom-90 actinide">
+                    <span class="number">90</span>
+                    <abbr title="">Th</abbr>
+                    <span class="atomic-name">Thorium</span>
+                </li>
+                <li class="atom atom-91 actinide">
+                    <span class="number">91</span>
+                    <abbr title="">Pa</abbr>
+                    <span class="atomic-name">Protactinium</span>
+                </li>
+                <li class="atom atom-92 actinide">
+                    <span class="number">92</span>
+                    <abbr title="">U</abbr>
+                    <span class="atomic-name">Uranium</span>
+                </li>
+                <li class="atom atom-93 actinide">
+                    <span class="number">93</span>
+                    <abbr title="">Np</abbr>
+                    <span class="atomic-name">Neptunium</span>
+                </li>
+                <li class="atom atom-94 actinide">
+                    <span class="number">94</span>
+                    <abbr title="">Pu</abbr>
+                    <span class="atomic-name">Plutonium</span>
+                </li>
+                <li class="atom atom-95 actinide">
+                    <span class="number">95</span>
+                    <abbr title="">Am</abbr>
+                    <span class="atomic-name">Americium</span>
+                </li>
+                <li class="atom atom-96 actinide">
+                    <span class="number">96</span>
+                    <abbr title="">Cm</abbr>
+                    <span class="atomic-name">Curium</span>
+                </li>
+                <li class="atom atom-97 actinide">
+                    <span class="number">97</span>
+                    <abbr title="">Bk</abbr>
+                    <span class="atomic-name">Berkelium</span>
+                </li>
+                <li class="atom atom-98 actinide">
+                    <span class="number">98</span>
+                    <abbr title="">Cf</abbr>
+                    <span class="atomic-name">Californium</span>
+                </li>
+                <li class="atom atom-99 actinide">
+                    <span class="number">99</span>
+                    <abbr title="">Es</abbr>
+                    <span class="atomic-name">Einsteinium</span>
+                </li>
+                <li class="atom atom-100 actinide">
+                    <span class="number">100</span>
+                    <abbr title="">Fm</abbr>
+                    <span class="atomic-name">Fermium</span>
+                </li>
+                <li class="atom atom-101 actinide">
+                    <span class="number">101</span>
+                    <abbr title="">Md</abbr>
+                    <span class="atomic-name">Mendelevium</span>
+                </li>
+                <li class="atom atom-102 actinide">
+                    <span class="number">102</span>
+                    <abbr title="">No</abbr>
+                    <span class="atomic-name">Nobelium</span>
+                </li>
+                <li class="atom atom-103 actinide">
+                    <span class="number">103</span>
+                    <abbr title="">Lr</abbr>
+                    <span class="atomic-name">Lawrencium</span>
+                </li>
+            </ol>
+        </div>
+        <div class="wrapper">
+            <ol class="explanation">
+                <li class="exp exp-1 alkali-metal"><span>Alkali Metal</span></li>
+                <li class="exp exp-2 alkaline-earth"><span>Alkaline Earth</span></li>
+                <li class="exp exp-3 transition-metal"><span>Transition Metal</span></li>
+                <li class="exp exp-4 basic-metal"><span>Basic Metal</span></li>
+                <li class="exp exp-5 metalloid"><span>Metalloid</span></li>
+                <li class="exp exp-6 nonmetal"><span>Nonmetal</span></li>
+                <li class="exp exp-7 halogen"><span>Halogen</span></li>
+                <li class="exp exp-8 noble-gas"><span>Noble Gas</span></li>
+                <li class="exp exp-9 lanthanide"><span>Lanthanide</span></li>
+                <li class="exp exp-10 actinide"><span>Actinide</span></li>
+            </ol>
+        </div>
+    </div>
+</body>
+</html>
