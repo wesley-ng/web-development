@@ -10,9 +10,9 @@
 <body>
     <nav id="navbar">
         <header>
-            <h1>Python Documentation</h1>
+            <h1>Python</h1>
         </header>
-        <ul>
+        <ul class="menu">
             <a href="#Introduction" class="nav-link" rel="internal">
                 <li>Introduction</li>
             </a>
@@ -40,7 +40,7 @@
     <!-- Main -->
     <main id="main-doc">
         <section class="main-section" id="Introduction">
-            <header>Introduction</header>
+            <header class="content-header"><h1>Introduction</h1></header>
             <article>
                 <p>First of all, what is Python? According to its creator, Guido van Rossum, Python is a:</p>
                 
@@ -49,189 +49,146 @@
                 allows programmers to express concepts in a few lines of code.”</blockquote>
 
                 <p>For me, the first reason to learn Python was that it is, in fact, a beautiful programming language. It was really
-                natural to code in it and express my thoughts.</p>
+                natural to code in it and express my thoughts.
 
-                <p>Another reason was that we can use coding in Python in multiple ways: data science, web development, and machine
+                Another reason was that we can use coding in Python in multiple ways: data science, web development, and machine
                 learning all shine here. Quora, Pinterest and Spotify all use Python for their backend web development. So let’s learn
                 a bit about it.</p>
             </article>
         </section>
         <section class="main-section" id="Variables">
-            <header>Variables</header>
+            <header class="content-header"><h1>Variables</h1></header>
             <article>
-                <p>You can think about variables as words that store a value. Simple as that.</p>
-                
-                <p>In Python, it is really easy to define a variable and set a value to it. Imagine you want to store number 1 in a
+                <p>You can think about variables as words that store a value. Simple as that. In Python, it is really easy to define a variable and set a value to it. Imagine you want to store number 1 in a
                 variable called “one.” Let’s do it:</p>
                 
-                <code>one = 1</code>
+                <pre><code>one = 1</code></pre>
                 
-                <p>How simple was that? You just assigned the value 1 to the variable <code class="codespan">one</code>.</p>
+                <p>How simple was that? You just assigned the value 1 to the variable one.</p>
 
-                <code>
-                    two = 2
-                    thousand = 1000
-                </code>
+                <pre><code>two = 2
+thousand = 1000</code></pre>
 
                 <p>And you can assign any other value to whatever other variables you want. As you see in the table above, the variable
-                <code class="code">two</code> stores the integer 2, and <code c;class="codespan">thousand</code> stores 10,000.</p>
+                two stores the integer 2, and thousand stores 10,000.
                 
-                <p>Besides integers, we can also use booleans (True / False), strings, float, and so many other data types.</p>
+                Besides integers, we can also use booleans (True / False), strings, float, and so many other data types.</p>
+<pre><code># booleans
+true_boolean = True
+false_boolean = False
 
-                <code>
-                    # booleans
-                    true_boolean = True
-                    false_boolean = False
-                    
-                    # string
-                    my_name = "Leandro Tk"
-                    
-                    # float
-                    book_price = 15.80
-                </code>
+# string
+my_name = "Leandro Tk"
 
+# float
+book_price = 15.80               </code></pre>
                 
 
             </article>
         </section>
         <section class="main-section" id="Control_Flow_Conditional_Statements">
-            <header>Control Flow : Conditional Statements</header>
+            <header class="content-header"><h1>Control Flow : Conditional Statements</h1></header>
             <article>
                 <p>“If” uses an expression to evaluate whether a statement is True or False. If it is True, it executes what is inside the
                 “if” statement. For example:</p>
 
-                <code>
-                    if True:
-                    print("Hello Python If")
-                    
-                    if 2 > 1:
-                    print("2 is greater than 1")
-                </code>
+                <pre><code>if True:
+    print("Hello Python If")
+if 2 > 1:
+    print("2 is greater than 1")</code></pre>
 
-                <p>2 is greater than 1, so the “print” code is executed.</p>
+                <p>2 is greater than 1, so the “print” code is executed.
 
-                <p>The “else” statement will be executed if the “if” expression is false.</p>
+                The “else” statement will be executed if the “if” expression is false.</p>
 
-                <code>
-                    if 1 > 2:
-                        print("1 is greater than 2")
-                    else:
-                        print("1 is not greater than 2")
-                </code>
+                <pre><code>if 1 > 2:
+    print("1 is greater than 2")
+else:
+    print("1 is not greater than 2")</code></pre>
 
-                <p>1 is not greater than 2, so the code inside the “else” statement will be executed.</p>
+                <p>1 is not greater than 2, so the code inside the “else” statement will be executed.
                 
-                <p>You can also use an “elif” statement:</p>
+                You can also use an “elif” statement:</p>
                 
-                <code>
-                    if 1 > 2:
-                        print("1 is greater than 2")
-                    elif 2 > 1:
-                        print("1 is not greater than 2")
-                    else:
-                        print("1 is equal to 2")
-                </code>
+                <pre><code>if 1 > 2:
+    print("1 is greater than 2")
+elif 2 > 1:
+    print("1 is not greater than 2")
+else:
+    print("1 is equal to 2")</code></pre>
             </article>
         </section>
         <section class="main-section" id="Looping_Iterator">
-            <header>Looping/Iterator</header>
+            <header class="content-header"><h1>Looping/Iterator</h1></header>
             <article>
-                <p>In Python, we can iterate in different forms. I’ll talk about two: while and for.</p>
-                
-                <p>While Looping: while the statement is True, the code inside the block will be executed. So, this code will print the
+                <p>In Python, we can iterate in different forms. I’ll talk about two: while and for. While Looping: while the statement is True, the code inside the block will be executed. So, this code will print the
                 number from 1 to 10.</p>
 
-                <code>
-                    num = 1
+                <pre><code>num = 1</code></pre>
 
-                    while num <= 10:
-                        print(num)
-                        num += 1
-                </code>
-
-                <p>The while loop needs a “loop condition.” If it stays True, it continues iterating. In this example, when num is 11 the loop condition equals False.</p>
-
-                <p>Another basic bit of code to better understand it:</p>
+                <p>The while loop needs a “loop condition.” If it stays True, it continues iterating. In this example, when num is 11 the loop condition equals False.Another basic bit of code to better understand it:</p>
                 
-                <code>
-                loop_condition = True
+                <pre><code>loop_condition = True
 
-                while loop_condition:
-                    print("Loop Condition keeps: %s" %(loop_condition))
-                    loop_condition = False
-                </code>
-                <p>The loop condition is True so it keeps iterating — until we set it to False.</p>
+while loop_condition:
+    print("Loop Condition keeps: %s" %(loop_condition))
+    loop_condition = False</code></pre>
 
-                <p>For Looping: you apply the variable “num” to the block, and the “for” statement will iterate it for you. This code will print the same as while code: from 1 to 10.</p>
+                <p>The loop condition is True so it keeps iterating — until we set it to False.
+                For Looping: you apply the variable “num” to the block, and the “for” statement will iterate it for you. This code will print the same as while code: from 1 to 10.</p>
 
-                <code>
-                    for i in range(1,11):
-                        print(i)
-                </code>
+                <pre><code>for i in range(1,11):
+    print(i)</code></pre>
 
                 <p>See? It is so simple. The range starts with 1 and goes until the 11th element (10 is the 10th element).</p>
             </article>
         </section>
         <section class="main-section" id="List_Collection_Array_Data_Structure">
-            <header>List: Collection | Array | Data Structure</header>
+            <header class="content-header"><h1>List: Collection | Array | Data Structure</h1></header>
             <article>
                 <p>Imagine you want to store the integer 1 in a variable. But maybe now you want to store 2. And 3, 4, 5 …</p>
                 
                 <p>Do I have another way to store all the integers that I want, but not in millions of variables? You guessed it — there
-                is indeed another way to store them.</p>
+                is indeed another way to store them. List is a collection that can be used to store a list of values (like these integers that you want). So let’s use it:</p>
                 
-                <p>List is a collection that can be used to store a list of values (like these integers that you want). So let’s use it:</p>
+                <pre><code>my_integers = [1, 2, 3, 4, 5]</code></pre>
                 
-                <code>
-                    my_integers = [1, 2, 3, 4, 5]
-                </code>
-                
-                <p>It is really simple. We created an array and stored it on my_integer.</p>
+                <p>It is really simple. We created an array and stored it on my_integer. But maybe you are asking: “How can I get a value from this array?”
 
-                <p>But maybe you are asking: “How can I get a value from this array?”</p>
+                Great question. List has a concept called index. The first element gets the index 0 (zero). The second gets 1, and so on. You get the idea.
 
-                <p>Great question. List has a concept called index. The first element gets the index 0 (zero). The second gets 1, and so on. You get the idea.</p>
-
-                <p>To make it clearer, we can represent the array and each element with its index. I can draw it:</p>
+                To make it clearer, we can represent the array and each element with its index. I can draw it:</p>
 
                 <img src="https://cdn-images-1.medium.com/max/880/1*ReMk6NgghLII20vPD6uNEA.jpeg" alt="Handwriting">
                 
                 <p>Using the Python syntax, it’s also simple to understand:</p>
 
-                <code>
-                    my_integers = [5, 7, 1, 3, 4]
-                    print(my_integers[0]) # 5
-                    print(my_integers[1]) # 7
-                    print(my_integers[4]) # 4
-                </code>
+<pre><code>my_integers = [5, 7, 1, 3, 4]
+print(my_integers[0]) # 5
+print(my_integers[1]) # 7
+print(my_integers[4]) # 4</code></pre>
 
                 <p>Imagine that you don’t want to store integers. You just want to store strings, like a list of your relatives’ names. Mine would look something like this:</p>
 
-                <code>
-                    elatives_names = [
-                        "Toshiaki",
-                        "Juliana",
-                        "Yuji",
-                        "Bruno",
-                        "Kaio"
-                    ]
-
-                    print(relatives_names[4]) # Kaio
-                </code>
+                <pre><code>elatives_names = [
+    "Toshiaki",
+    "Juliana",
+    "Yuji",
+    "Bruno",
+    "Kaio"
+]
+print(relatives_names[4]) # Kaio</code></pre>
 
                 <p>It works the same way as integers. Nice.</p>
 
-                <p>We just learned how Lists indices work. But I still need to show you how we can add an element to the List data structure (an item to a list).</p>
+                <p>We just learned how Lists indices work. But I still need to show you how we can add an element to the List data structure (an item to a list).The most common method to add a new value to a List is append. Let’s see how it works:</p>
 
-                <p>The most common method to add a new value to a List is append. Let’s see how it works:</p>
 
-                <code>
-                    bookshelf = []
-                    bookshelf.append("The Effective Engineer")
-                    bookshelf.append("The 4 Hour Work Week")
-                    print(bookshelf[0]) # The Effective Engineer
-                    print(bookshelf[1]) # The 4 Hour Work Week
-                </code>
+                <pre><code>bookshelf = []
+bookshelf.append("The Effective Engineer")
+bookshelf.append("The 4 Hour Work Week")
+print(bookshelf[0]) # The Effective Engineer
+print(bookshelf[1]) # The 4 Hour Work Week</code></pre>
 
                 <p>append is super simple. You just need to apply the element (eg. “The Effective Engineer”) as the append parameter.</p>
 
@@ -241,144 +198,121 @@
             </article>
         </section>
         <section class="main-section" id="Dictionary_Key-Value_Data_Structure">
-            <header>Dictionary: Key-Value Data Structure</header>
+            <header class="content-header"><h1>Dictionary: Key-Value Data Structure</h1></header>
             <article>
-                <p>Now we know that Lists are indexed with integer numbers. But what if we don’t want to use integer numbers as indices? Some data structures that we can use are numeric, string, or other types of indices.</p>
+                <p>Now we know that Lists are indexed with integer numbers. But what if we don’t want to use integer numbers as indices? Some data structures that we can use are numeric, string, or other types of indices.Let’s learn about the Dictionary data structure. Dictionary is a collection of key-value pairs. Here’s what it looks like:</p>
 
-                <p>Let’s learn about the Dictionary data structure. Dictionary is a collection of key-value pairs. Here’s what it looks like:</p>
-
-                <code>
-                dictionary_example = {
-                    "key1": "value1",
-                    "key2": "value2",
-                    "key3": "value3"
-                }
-                </code>
+                <pre><code>dictionary_example = {
+    "key1": "value1",
+    "key2": "value2",
+    "key3": "value3"
+}</code></pre>
                 
                 <p>The key is the index pointing to the value. How do we access the Dictionary value? You guessed it — using the key. Let’s try it:</p>
 
-                <code>
-                    dictionary_tk = {
-                        "name": "Leandro",
-                        "nickname": "Tk",
-                        "nationality": "Brazilian"
-                    }
+                <pre><code>dictionary_tk = {
+    "name": "Leandro",
+    "nickname": "Tk",
+    "nationality": "Brazilian"
+}
 
-                    print("My name is %s" %(dictionary_tk["name"])) # My name is Leandro
-                    print("But you can call me %s" %(dictionary_tk["nickname"])) # But you can call me Tk
-                    print("And by the way I'm %s" %(dictionary_tk["nationality"])) # And by the way I'm Brazilian
-                </code>
+print("My name is %s" %(dictionary_tk["name"])) # My name is Leandro
+print("But you can call me %s" %(dictionary_tk["nickname"])) # But you can call me Tk
+print("And by the way I'm %s" %(dictionary_tk["nationality"])) # And by the way I'm Brazilian</code></pre>
 
-                <p>I created a Dictionary about me. My name, nickname, and nationality. Those attributes are the Dictionary keys.</p>
-
-                <p>As we learned how to access the List using index, we also use indices (keys in the Dictionary context) to access the value stored in the Dictionary.</p>
-
-                <p>In the example, I printed a phrase about me using all the values stored in the Dictionary. Pretty simple, right?</p>
+                <p>I created a Dictionary about me. My name, nickname, and nationality. Those attributes are the Dictionary keys.As we learned how to access the List using index, we also use indices (keys in the Dictionary context) to access the value stored in the Dictionary. In the example, I printed a phrase about me using all the values stored in the Dictionary. </p>
+                    
+                    <p>Pretty simple, right?</p>
 
                 <p>Another cool thing about Dictionary is that we can use anything as the value. In the Dictionary I created, I want to add the key “age” and my real integer age in it:</p>
 
-                <code>
-                    dictionary_tk = {
-                        "name": "Leandro",
-                        "nickname": "Tk",
-                        "nationality": "Brazilian",
-                        "age": 24
-                    }
+                <pre><code>dictionary_tk = {
+    "name": "Leandro",
+    "nickname": "Tk",
+    "nationality": "Brazilian",
+    "age": 24
+}
 
-                    print("My name is %s" %(dictionary_tk["name"])) # My name is Leandro
-                    print("But you can call me %s" %(dictionary_tk["nickname"])) # But you can call me Tk
-                    print("And by the way I'm %i and %s" %(dictionary_tk["age"], dictionary_tk["nationality"])) # And by the way I'm Brazilian
-                </code>
+print("My name is %s" %(dictionary_tk["name"])) # My name is Leandro
+print("But you can call me %s" %(dictionary_tk["nickname"])) # But you can call me Tk
+print("And by the way I'm %i and %s" %(dictionary_tk["age"], dictionary_tk["nationality"])) # And by the way I'm Brazilian</code></pre>
 
                 <p>Here we have a key (age) value (24) pair using string as the key and integer as the value.</p>
 
                 <p>As we did with Lists, let’s learn how to add elements to a Dictionary. The key pointing to a value is a big part of what Dictionary is. This is also true when we are talking about adding elements to it:</p>
 
-                <code>
-                    dictionary_tk = {
-                        "name": "Leandro",
-                        "nickname": "Tk",
-                        "nationality": "Brazilian"
-                    }
+                <pre><code>dictionary_tk = {
+    "name": "Leandro",
+    "nickname": "Tk",
+    "nationality": "Brazilian"
+}
 
-                    dictionary_tk['age'] = 24
-
-                    print(dictionary_tk) # {'nationality': 'Brazilian', 'age': 24, 'nickname': 'Tk', 'name': 'Leandro'}
-                </code>
+dictionary_tk['age'] = 24
+print(dictionary_tk) # {'nationality': 'Brazilian', 'age': 24, 'nickname': 'Tk', 'name': 'Leandro'}</code></pre>
                 
                 <p>We just need to assign a value to a Dictionary key. Nothing complicated here, right?</p>
 
             </article>
         </section>
         <section class="main-section" id="#Iteration_Looping_Through_Data_Structures">
-            <header>Iteration: Looping Through Data Structures</header>
+            <header class="content-header"><h1>Iteration: Looping Through Data Structures</h1></header>
             <article>
                 <p>We just need to assign a value to a Dictionary key. Nothing complicated here, right?</p>
 
-                <code>
-                    bookshelf = [
-                        "The Effective Engineer",
-                        "The 4 hours work week",
-                        "Zero to One",
-                        "Lean Startup",
-                        "Hooked"    
-                    ]
-
-                    for book in bookshelf:
-                        print(book)
-                </code>
+                <pre><code>bookshelf = [
+    "The Effective Engineer",
+    "The 4 hours work week",
+    "Zero to One",
+    "Lean Startup",
+    "Hooked"    
+]
+for book in bookshelf:
+    print(book)</code></pre>
 
                 <p>So for each book in the bookshelf, we (can do everything with it) print it. Pretty simple and intuitive. That’s Python.</p>
 
                 <p>For a hash data structure, we can also use the for loop, but we apply the key :</p>
 
-                <code>
+                <pre><code>dictionary = { "some_key": "some_value" }
 
-                dictionary = { "some_key": "some_value" }
-
-                for key in dictionary:
-                    print("%s --> %s" %(key, dictionary[key]))
-                    
-                # some_key --> some_value
-                </code>
+for key in dictionary:
+    print("%s --> %s" %(key, dictionary[key]))
+# some_key --> some_value</code></pre>
 
                 <p>This is an example how to use it. For each key in the dictionary , we print the key and its corresponding value.</p>
 
                 <p>Another way to do it is to use the iteritems method.</p>
 
-                <code>
-                    dictionary = { "some_key": "some_value" }
-
-                    for key, value in dictionary.items():
-                        print("%s --> %s" %(key, value))
-
-                    # some_key --> some_value
-                </code>
+                <pre><code>dictionary = { "some_key": "some_value" }
+for key, value in dictionary.items():
+    print("%s --> %s" %(key, value))
+# some_key --> some_value</code></pre>
 
                 <p>We did name the two parameters as key and value, but it is not necessary. We can name them anything. Let’s see it:</p>
 
-                <code>
-                    dictionary_tk = {
-                        "name": "Leandro",
-                        "nickname": "Tk",
-                        "nationality": "Brazilian",
-                        "age": 24
-                    }
+<pre><code>dictionary_tk = {
+    "name": "Leandro",
+    "nickname": "Tk",
+    "nationality": "Brazilian",
+    "age": 24
+}
 
-                    for attribute, value in dictionary_tk.items():
-                        print("My %s is %s" %(attribute, value))
-                        
-                    # My name is Leandro
-                    # My nickname is Tk
-                    # My nationality is Brazilian
-                    # My age is 24
-                </code>
+for attribute, value in dictionary_tk.items():
+    print("My %s is %s" %(attribute, value))
+    
+# My name is Leandro
+# My nickname is Tk
+# My nationality is Brazilian
+# My age is 24</code></pre>
                 <p>We can see we used attribute as a parameter for the Dictionary key, and it works properly. Great!</p>
+                <br><br>
+                <h3 class="source">Source for this documentation is based from this <a href="https://medium.freecodecamp.org/learning-python-from-zero-to-hero-120ea540b567"
+                    target="_blank">blog</a>.</h3>
             </article>
         </section>
     </main>
-<footer class="source">
-    <h3>Source for this documentation is based from this <a href="https://medium.freecodecamp.org/learning-python-from-zero-to-hero-120ea540b567" target="_blank">blog</a>.</h3>
-</footer>
+<!-- <footer class="source">
+    <h3></h3>
+</footer> -->
 </body>
 </html>

@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+* {
+    box-sizing: border-box;
+    font-size: 1rem;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    /* color: #111; */
+}
+
+body {
+    min-width: 250px;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    flex: 1 1 auto;
+    color: #111;
+}
+
+/* Navbar */
+
+#navbar {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+#navbar header > h1 {
+    padding: .5rem 1rem .5rem 1rem;
+    font-size: 30px;
+    line-height: 1.5;
+    background-color: lightskyblue;
+}
+
+.menu  {
+    display: flex;
+    flex-direction: column;
+    padding: .5em;
+    padding-top: .2em;
+}
+
+.nav-link {
+    font-size: 2rem;
+    padding: .2em;
+    color: #111;
+}
+
+.nav-link:last-child {
+    border: none;
+}
+
+.nav-link:hover{
+    color: #fff;
+    background-color: lightskyblue;
+}
+/* Main */
+#main-doc {
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 .5em 1em;
+    text-align: left;
+}
+
+.main-section {
+    line-height: 1.5;
+    width: 95%;
+}
+
+.content-header h1 {
+    font-size: 30px;
+    padding: .5rem .5rem 0 .5rem;
+}
+
+
+blockquote {
+    max-width: 80%;
+    background-color: lightcyan;
+    border-radius: 10px;
+    padding:  30px 50px;
+    border-left: 10px solid lightskyblue;
+    margin: 10px 0 10px 30px;
+    font-size: 24px;
+    font-weight: 400;
+    font-style: italic;
+    color: #333;
+}
+
+code {
+    display: flex;
+    text-align: left;
+    word-break: normal;
+    word-wrap: normal;
+    /* white-space: pre; */
+    border-radius: 10px;
+    width: 85%;
+    line-height: 2;
+    padding: 20px;
+    margin: 15px 20px 15px 30px;
+    background-color: #f7f7f7;
+}
+
+article {
+    margin: 30px;
+}
+
+img {
+    margin: 20px;
+    max-width: 60vw;
+}
