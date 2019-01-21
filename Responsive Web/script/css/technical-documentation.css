@@ -12,10 +12,11 @@
 }
 
 body {
-    min-width: 250px;
+    min-width: 200px;
     display: flex;
     flex-direction: row;
-    position: relative;
+    overflow: hidden;
+    position: relat ive;
     flex: 1 1 auto;
     color: #111;
 }
@@ -26,6 +27,8 @@ body {
     display: flex;
     justify-content: flex-start;
     flex-direction: column;
+    border-right: 3px groove #444;
+    min-width: 250px;
 }
 
 #navbar header > h1 {
@@ -59,6 +62,8 @@ body {
 /* Main */
 #main-doc {
     display: flex;
+    height: 100vh;
+    overflow-y: scroll;
     flex-direction: column;
     margin: 0 0 .5em 1em;
     text-align: left;
@@ -72,6 +77,15 @@ body {
 .content-header h1 {
     font-size: 30px;
     padding: .5rem .5rem 0 .5rem;
+}
+
+.outline {
+    margin-left: 30px;
+    padding: 20px;
+}
+
+.outline li {
+    list-style: circle;
 }
 
 
@@ -89,17 +103,18 @@ blockquote {
 }
 
 code {
-    display: flex;
+    display: inline-block;
     text-align: left;
     word-break: normal;
     word-wrap: normal;
     /* white-space: pre; */
     border-radius: 10px;
-    width: 85%;
+    width: 60vw;
     line-height: 2;
     padding: 20px;
     margin: 15px 20px 15px 30px;
     background-color: #f7f7f7;
+    overflow-x: scroll;
 }
 
 article {
@@ -107,6 +122,22 @@ article {
 }
 
 img {
-    margin: 20px;
-    max-width: 60vw;
+    margin: 10px;
+    max-width: 50vw;
+}
+
+
+@media only screen and (max-width: 512px) {
+    body {
+        flex-direction: column;
+        overflow-y: scroll;
+    }
+    #navbar {
+        max-height: 300px;
+        overflow-y: scroll;
+        
+    }
+    #main-doc {
+        overflow-y: initial;
+    }
 }
