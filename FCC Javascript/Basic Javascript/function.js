@@ -86,3 +86,17 @@ function processArg(num) {
     return (num + 3) / 5;
 }
 processed = processArg(7);
+
+// * No. 48
+// * Stand in Line
+function nextInLine(arr, item) {
+    arr.push(item);
+    var rmv = arr.shift();
+    return rmv;
+}
+
+var testArr = [1,2,3,4,5];
+
+console.log("Before: "+ JSON.stringify(testArr));
+console.log(nextInLine(testArr, 6));
+console.log("After: "+ JSON.stringify(testArr));
