@@ -201,7 +201,7 @@ var collection = {
 };
 // ? Keep a copy of the collection for tests
 var collectionCopy = JSON.parse(JSON.stringify(collection));
-
+// ? First
 function updateRecords(id, prop, value) {
     if (prop === "tracks" && value !== "") {
         if (collection[id][prop]) {
@@ -216,6 +216,41 @@ function updateRecords(id, prop, value) {
         delete collection[prop];
     }
 }
-updateRecords(5439, "artist", "");
+// ? Second
+function updateRecordsX(id, props, value) {
+    if (props === "tracks" && !collection[id].hasOwnProperty("tracks")) {
+        collection[id][props] = [value];
+    } 
+    else if (props === "tracks" && value !== "") {
+        collection[id][props].push(value);
+    } 
+    else if (props !== "tracks" && value !== "") {
+        collection[id][props] = value;
+    }
+    else if (value == "") {
+        delete collection[id][props];
+    }
+}
+// ? Third 
+function updateRecordsY(id, props, value) {
+    if (value !== "") {
+        if (props === "tracks") {
+            if (!collection[id].hasOwnProperty("tracks")) {
+                collection[id][props] = [value];
+            } else {
+                collection[id][props].push(value);
+            }
+        } else {
+            collection[id][props] = value;
+        }
+    } else {
+        delete collection[id][props];
+    }
+    return collection;
+}
+
+updateRecordsY(1245, "tracks", "Meow");
+updateRecordsY(5439, "artist", "ABBA");
+updateRecordsY(2468, "artist", "");
 // collection["5439"].artist = "ABBA";
 console.log(collection);
