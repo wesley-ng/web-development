@@ -46,3 +46,31 @@ let exampleStr = "Let's have a fun, a run with regular expressions!";
 let unRegex = /.un/;
 let result_6 = unRegex.test(exampleStr);
 console.log(result_6);
+
+// * No. 8
+// * Regex: match single character with multiple possibilities
+let quoteSample = "Beware of bugs in the above code; I have only proved it correct, not tried it";
+let vowelRegex = /[aiueo]/gi;
+let result_7 = quoteSample.match(vowelRegex);
+console.log(result_7.length);
+
+// * No. 9
+// * Regex: match letters of the alphabet
+let quoteXample = "The quick brown fox jumps over the lazy dog.";
+let alphabetRegex = /[a-z]/gi;
+let result_8 = quoteXample.match(alphabetRegex);
+console.log(result_8.length);
+
+// * No. 10
+// * Regex: match numbers and letters of the alphabet
+let quotXample = "Blueberry 3.141592653s are delicious.";
+let myRegeks = /[h-s2-6]/gi;
+let result_9 = quotXample.match(myRegeks);
+console.log(result_9.length);
+
+// * No. 11
+// * Regex: match single characters not specified
+let quote_sample = "3 blind mice.";
+let my_regex = /[^aiueo0-9]/gi;
+let result_10 = quote_sample.match(my_regex);
+console.log(result_10.length);
