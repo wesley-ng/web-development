@@ -88,3 +88,110 @@ function checkInventory(scannedItem) {
 }
 console.log(checkInventory("apples"));
 
+// * No. 16
+// * DS: use the delete keyword to remove object properties
+let fruits = objCopyAssign(foods);
+delete fruits.oranges;
+delete fruits.plums;
+delete fruits.strawberries;
+console.log(fruits);
+
+// * No. 17
+// * DS: check if an object has a property
+let users = {
+    Alan: {
+        age: 27,
+        online: true
+    },
+    Jeff: {
+        age: 32,
+        online: true
+    }, 
+    Sarah: {
+        age: 48,
+        online: true
+    },
+    Ryan: {
+        age: 19,
+        online: true
+    }
+};
+
+function isEveryoneHere(obj) {
+    if (obj.hasOwnProperty("Alan") && obj.hasOwnProperty("Jeff") && obj.hasOwnProperty("Sarah") && obj.hasOwnProperty("Ryan")) {
+        return true;
+    }
+    // * minimum version 
+    // ? if (obj.hasOwnProperty('Alan', 'Jeff', 'Sarah', 'Ryan')) {
+    // ?   return true;
+    // ?}
+    return false;
+}
+
+console.log(isEveryoneHere(users));
+
+// * No. 18
+// * DS: iterate through the keys of an object with a for ... in statement
+let members = objCopyIteration(users);
+members.Alan.online = false;
+members.Sarah.online = false;
+// console.log(members);
+
+function countOnline(obj) {
+    let count = 0;
+    // ? when you use variable as property name, you should use bracket, not dot. Why? Because we try to access user object inside members object which does not exist, meanwhile bracket notation let you to access it
+    for (let user in obj) {
+        if (obj[user].online === true) {
+            count ++;
+        }
+    }
+    return count;     
+}
+// console.log(members.Alan);
+console.log(countOnline(members));
+
+// * No. 19
+// * DS: generate an array of all object keys with object.keys()
+let party = objCopyJson(members);
+// console.log(party);
+function getArrayOfUsers(obj) {
+    let arrUsers = [];
+    for (let user in obj) {
+        arrUsers.push(user);
+        arrUsers.push(Object.keys(obj[user]));
+    }
+    return arrUsers;
+}
+
+console.log(getArrayOfUsers(party));
+
+// * No. 20
+// * DS: modify an array stored in an object
+let player = {
+    name: "Kenneth",
+    age: 28,
+    data: {
+        username: "kennethCodesAllDay",
+        joinDate: "March 26, 2016",
+        organization: "freeCodeCamp",
+        friends: [
+            "Sam",
+            "Kira", 
+            "Tomo"
+        ],
+        location: {
+            city: "San Francisco",
+            state: "CA",
+            country: "USA"
+        }
+    }
+};
+
+function addFriend(userObj, friend) {
+    let frienda = userObj.data.friends;
+    frienda.push(friend); 
+    return frienda;
+}
+
+console.log(addFriend(player, "Peter"));
+// console.log(player);
