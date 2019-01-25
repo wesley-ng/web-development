@@ -72,3 +72,22 @@ let hello = "    Hello, World!    ";
 let wsRegex = /^(\s+)|(\s+)$/g;
 let result_9 = hello.replace(wsRegex, "");
 console.log(result_9);
+
+// * Misc
+// * Regex: add spaces in CamelCase
+// * Grouping "( )" could be referenced with number like $1
+let camel = "helloWorldItIsMe";
+let camelRegex = /([A-Z])/g;
+let result_10 = camel.replace(camelRegex, ' $1');
+console.log(result_10);
+
+// * Regex: remove capital letter
+let capitalRegex = /[A-Z]/g;
+// * function as the second parameter would be invoked after the match has been performed and the result of the function will be used as the replacement string
+let result_11 = result_10.replace(capitalRegex, u => u.toLowerCase()); 
+console.log(result_11);
+
+// * Regex: capitalize first letter
+let firstCapital = /^[a-z]/;
+let result_12 = result_11.replace(firstCapital, u => u.toUpperCase());
+console.log(result_12);
