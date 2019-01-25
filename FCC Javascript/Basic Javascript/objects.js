@@ -169,7 +169,7 @@ var myPlants = [
     }
 ];
 
-var secondTree = myPlants[1].list[1]
+var secondTree = myPlants[1].list[1];
 console.log(secondTree);
 
 // * No. 84
