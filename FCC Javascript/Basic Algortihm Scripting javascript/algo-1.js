@@ -107,6 +107,50 @@ function endWith(str, target) {
     return re.test(str);
 }
 
-console.log(endWith("He has to give me a new name", "name"));
+// ? intermediate solution
+function ends_with(str, target) {
+    return str.slice(str.length-target.length) === target;
+}
+
+console.log(ends_with("He has to give me a new name", "name"));
 console.log(endWith("Walking on water and developing software from a specification are easy if both are frozen", "zen"));
 console.log(confirmEnding("Congratulation", "on"));
+
+// * No. 7
+// * Algo: repeat a string repeat a string
+// ? simpler solution
+function repeatStringNumTimes(str, num) {
+    if(num > 0) {
+        return str.repeat(num);
+    }
+    return "";
+}
+
+function repeatStr(str, num) {
+    let i = 0;
+    let temp = "";
+    if (num > 0) {
+        while (i < num) {
+            temp = temp + str;
+            i++;
+        }
+        return temp;
+    }
+    return "";
+}
+
+console.log(repeatStr("*", 3));
+
+// * No. 8
+// * Algo: truncate a string
+function truncateString(str, num) {
+    let arr = [];
+    if (num < str.length) {
+        for (let i = 0; i < num; i++) {
+            arr.push(str[i]);
+        }
+        return arr.join('')+"...";
+    }
+    return str;
+}
+console.log(truncateString("A-tisket a-tasket A green and yellow basket", "A-tisket a-tasket A green and yellow basket".length));
