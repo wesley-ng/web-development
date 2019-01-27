@@ -153,4 +153,16 @@ function truncateString(str, num) {
     }
     return str;
 }
+
+// ? simpler solution
+function truncateStr (str, num) {
+    if (str.length > num) {
+        return str.slice(0, num) + '...'; }
+    // } else if (str.length > num && num <= 3) {
+        // return str.slice(0, num) + '...';
+    // }
+    else return str;
+}
+console.log(truncateStr("A-tisket a-tasket A green and yellow basket", 8));
+
 console.log(truncateString("A-tisket a-tasket A green and yellow basket", "A-tisket a-tasket A green and yellow basket".length));
