@@ -5,6 +5,7 @@
     padding: 0;
     text-decoration: none;
     list-style: none;
+    box-sizing: border-box;
 }
 
 body {
@@ -12,7 +13,9 @@ body {
     padding: 0;
     font-size: 1em;
     line-height: 1.5;
+    background-color: #fbfbfb;
     font-family: 'Roboto', sans-serif;
+    width: 100%;
     position: relative;
 }
 
@@ -20,10 +23,11 @@ body {
 
 .welcome-header {
     width: 100%;
-    height: 50vh;
+    height: 100vh;
     background: linear-gradient(180deg, rgba(166, 254, 228, 0.5) 0%, rgba(28, 30, 29, 0.15) 0.01%),
-    url(../../images/koi\ fish.jpg);
+    url(../../images/green\ pond.jpg);
     background-size: cover;
+    background-repeat: no-repeat;
     position: relative;
 }
 
@@ -42,36 +46,46 @@ body {
 }
 
 ._hello {
-    font-size: 108px;
+    font-size: 5em;
     margin-right: 40px;
 }
 
 .hello-description {
-    font-size: 30px;
+    font-size: 1em;
     border-left: 6px solid #f4f4f4;
     padding: 20px 0 0 40px;
     align-content: center;
 }
 /* Nav */
-
+.navbar {
+    position: fixed;
+    overflow: hidden;
+    width: 100%;
+    top: 0;
+}
 .nav-bar {
     display: flex;
-    background: #F4F4F4;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    background: url(../../images/green\ pond.jpg);
+    background-size: cover;
+    box-shadow: 0px 10px 10px rgba(203, 203, 203, 0.6);
     /* position: fixed; */
     width: 100%;
     font-weight: bold;
     align-items: center;
     justify-content: center;
+    /* position: fixed; */
 }
 .nav-bar li {
-    color: #5A6345;
+    color: #f4f4f4;
     margin-left: 20px;
-    margin-right: 20px;
+}
+
+.nav-bar li:first-child {
+    margin-right: 120px;
 }
 
 .nav-bar li a {
-    color: #5A6345;
+    color: #f4f4f4;
     font-size: 24px;
     align-content: center;
 }
@@ -81,4 +95,164 @@ body {
     margin-left: auto;
     margin-right: auto;
     font-size: 36px;
+}
+
+.nav-bar li:nth-child(4) {
+    margin-right: 20px;
+}
+
+/* Projects */
+.project-text {
+    text-align: center;
+    margin: 0 10% 0 10%;
+    padding: 50px 0 50px 0;
+    color: #5A6345;
+}
+.works {
+    display:grid;
+    grid-gap: 80px;
+    grid-template-columns: [beginning] 1fr [midstart] 1fr [midend] 1fr [ending];
+    grid-template-rows: 400px 400px;
+    place-content: center;
+    margin: 0 10% 5% 10%;
+}
+
+.works a:last-child {
+    grid-column: midstart / midend;
+}
+
+.work {
+    display: grid;
+    grid-template-rows: 300px 100px;
+    text-align: center;
+    border: 8px solid #eeeeee;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.work-wrapper {
+    display: flex;
+    border-bottom: 5px solid #e1e1e1;
+    position: relative;
+    z-index: -100;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.img-wrapper {
+    width: 60%;
+    height: 70%;
+    border: 10px solid rgb(99, 99, 99);
+    border-bottom-width: 14px;
+    border-top-width: 12px;
+    border-radius: 10px;
+}
+
+.img-wrapper img {
+    width: 100%;
+    height: 100%;
+}
+
+.kaki {
+    width:20%;
+    height: 10%;
+    background: rgb(99, 99, 99);
+}
+
+.work-desc {
+    color: #333;
+}
+
+.work-desc:hover{ 
+    color: rgb(71, 102, 245);
+    border: 2px solid #ddd;
+}
+
+.work-1 {
+    background-color: #87E37F;
+}
+
+.work-2 {
+    background-color: #F86767;
+}
+
+.work-3 {
+    background-color: #FFAD62;
+}
+
+.work-4 {
+    background-color: #63CAF6;
+}
+
+/* Contact */
+.contact {
+    display: flex;
+    flex-direction: column;
+    padding: 50px 0 30px 0;
+    margin-top: 50px;
+    color: #777;
+    background-color: #f1f1f1;
+}
+
+.contact-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 70%;
+    margin-left: auto;
+    margin-right: 150px;
+}
+
+.contact p {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.email h4 {
+    font-size: 30px;
+    font-weight: bold;
+    color: #777;
+}
+
+.sosmed {
+    display: flex;
+    flex-direction: column;
+}
+
+.sosmed h5 {
+    font-size: 24px;
+}
+
+span {
+    padding: 8px;
+    padding-left: 0;
+}
+
+span a {
+    color: #777;
+}
+
+/* Hovering */
+.mail:hover {
+    color: rgb(255, 51, 92);
+}
+
+.insta:hover {
+    color: rgb(255, 155, 172);
+} 
+
+.twitter:hover{
+    color: #63CAF6;
+}
+
+.github:hover{
+    color: #222;
+}
+
+.codepen:hover{
+    color: #111;
+}
+
+.fcc:hover {
+    color: green;
 }
