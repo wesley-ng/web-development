@@ -1,0 +1,326 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 1em;
+    line-height: 1.5;
+    background-color: #fbfbfb;
+    font-family: 'Roboto', sans-serif;
+    width: 100%;
+    position: relative;
+}
+
+/* Header */
+
+.welcome-header {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(180deg, rgba(166, 254, 228, 0.5) 0%, rgba(28, 30, 29, 0.15) 0.01%),
+    url(../../images/green\ pond.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.hello {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.hello {
+    display: flex;
+    color: #F2f2f2;
+    font-weight: bold;
+    font-style: normal;
+}
+
+._hello {
+    font-size: 5em;
+    margin-right: 40px;
+}
+
+.hello-description {
+    font-size: 1em;
+    border-left: 6px solid #f2f2f2;
+    padding: 20px 0 0 40px;
+    align-content: center;
+}
+/* Nav */
+.navbar {
+    position: fixed;
+    overflow: hidden;
+    width: 100%;
+    top: 0;
+}
+.nav-bar {
+    display: flex;
+    background-size: cover;
+    box-shadow: 0px 10px 10px rgba(203, 203, 203, 0.6);
+    /* position: fixed; */
+    width: 100%;
+    background-color: #184d44;
+    font-weight: bold;
+    align-items: center;
+    justify-content: center;
+    /* position: fixed; */
+}
+.nav-bar li {
+    color: #f4f4f4;
+    margin-left: 20px;
+}
+
+.nav-bar li:first-child {
+    margin-right: 120px;
+}
+
+.nav-bar li a {
+    color: #f4f4f4;
+    font-size: 24px;
+    align-content: center;
+}
+
+.nav-bar li:nth-child(2) {
+    justify-self: center;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 36px;
+}
+
+.nav-bar li:nth-child(4) {
+    margin-right: 20px;
+}
+
+/* Projects */
+.project-text {
+    text-align: center;
+    margin: 0 10% 0 10%;
+    padding: 50px 0 50px 0;
+    color: #5A6345;
+}
+.works {
+    display:grid;
+    grid-gap: 80px;
+    grid-template-columns: [beginning] 1fr [midstart] 1fr [midend] 1fr [ending];
+    grid-template-rows: 400px 400px;
+    place-content: center;
+    margin: 0 10% 5% 10%;
+}
+
+.works a:last-child {
+    grid-column: midstart / midend;
+}
+
+.work {
+    display: grid;
+    grid-template-rows: 300px 100px;
+    text-align: center;
+    border: 8px solid rgba(51, 189, 147, 0.6);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.work-wrapper {
+    display: flex;
+    border-bottom: 5px solid rgba(51, 189, 147, 0.3);
+    position: relative;
+    z-index: -100;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.img-wrapper {
+    width: 60%;
+    height: 70%;
+    border: 10px solid rgb(99, 99, 99);
+    border-bottom-width: 14px;
+    border-top-width: 12px;
+    border-radius: 10px;
+}
+
+.img-wrapper img {
+    width: 100%;
+    height: 100%;
+}
+
+.kaki {
+    width:20%;
+    height: 10%;
+    background: rgb(99, 99, 99);
+}
+
+.work-desc {
+    color: #333;
+}
+
+.work-desc:hover{ 
+    color: rgb(71, 102, 245);
+    border: 2px solid #ddd;
+}
+
+.work-1 {
+    background-color: #87E37F;
+}
+
+.work-2 {
+    background-color: #F86767;
+}
+
+.work-3 {
+    background-color: #FFAD62;
+}
+
+.work-4 {
+    background-color: #63CAF6;
+}
+
+/* Contact */
+.contact {
+    display: flex;
+    flex-direction: column;
+    padding: 3em 0 3em 0;
+    margin-top: 50px;
+    color: #777;
+    background-color: #f1f1f1;
+}
+
+.contact-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 70%;
+    margin-left: auto;
+    margin-right: 100px;
+}
+
+.contact p {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.email h4 {
+    font-weight: bold;
+    color: #777;
+}
+
+.sosmed {
+    display: flex;
+    flex-direction: column;
+}
+
+
+span {
+    padding: 8px;
+    padding-left: 0;
+}
+
+span a {
+    color: #777;
+}
+
+/* Hovering */
+.mail:hover {
+    color: rgb(255, 51, 92);
+}
+
+.insta:hover {
+    color: rgb(255, 155, 172);
+} 
+
+.twitter:hover{
+    color: #63CAF6;
+}
+
+.github:hover{
+    color: #222;
+}
+
+.codepen:hover{
+    color: #111;
+}
+
+.fcc:hover {
+    color: green;
+}
+
+.sosmed-mobile {
+    display: none;
+}
+
+/* Tab */
+@media screen and (min-width: 768px) and (max-width: 1250px) {
+    .works {
+        display: grid;
+        grid-gap: 40px;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 350px 350px;
+    }
+    .works a:last-child {
+        grid-column: initial;
+    }
+
+    .work {
+        grid-template-rows: 275px 75px;
+    }
+}
+
+/* Phone */
+@media only screen and (min-width: 320px) and (max-width: 767px){
+    .hello {
+        flex-direction: column;
+    }
+    ._hello {
+        margin-right: 0;
+    }
+    .hello-description {
+        border-left: none;
+        border-top: 6px solid #f2f2f2;
+        text-align: center;
+        padding: 0;
+        padding-top: 20px;
+    }
+    .works {
+        display: grid;
+        grid-gap: 80px;
+        grid-template-columns: 80%;
+        grid-template-rows: auto;
+    }
+    .works a:last-child {
+        grid-column: initial;
+    }
+    .work {
+        display: grid;
+        grid-template-rows: 225px 100px;
+        text-align: center;
+        border: 8px solid rgba(51, 189, 147, 0.6);
+        border-radius: 10px;
+        overflow: hidden;
+    }
+    .sosmed, .nav-bar li {
+        display: none;
+    }
+    .nav-bar li:nth-child(2) {
+        display: inline;
+    }
+    .contact-list {
+        display: flex;
+        flex-direction: column;
+        text-align:center;
+        margin: auto;
+    }
+    .sosmed-mobile {
+        display: flex;
+        justify-content: center;
+    }
+}
+
