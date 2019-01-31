@@ -40,7 +40,7 @@ body {
 
 .hello {
     display: flex;
-    color: #F4F4F4;
+    color: #F2f2f2;
     font-weight: bold;
     font-style: normal;
 }
@@ -52,7 +52,7 @@ body {
 
 .hello-description {
     font-size: 1em;
-    border-left: 6px solid #f4f4f4;
+    border-left: 6px solid #f2f2f2;
     padding: 20px 0 0 40px;
     align-content: center;
 }
@@ -65,11 +65,11 @@ body {
 }
 .nav-bar {
     display: flex;
-    background: url(../../images/green\ pond.jpg);
     background-size: cover;
     box-shadow: 0px 10px 10px rgba(203, 203, 203, 0.6);
     /* position: fixed; */
     width: 100%;
+    background-color: #184d44;
     font-weight: bold;
     align-items: center;
     justify-content: center;
@@ -125,14 +125,14 @@ body {
     display: grid;
     grid-template-rows: 300px 100px;
     text-align: center;
-    border: 8px solid #eeeeee;
+    border: 8px solid rgba(51, 189, 147, 0.6);
     border-radius: 10px;
     overflow: hidden;
 }
 
 .work-wrapper {
     display: flex;
-    border-bottom: 5px solid #e1e1e1;
+    border-bottom: 5px solid rgba(51, 189, 147, 0.3);
     position: relative;
     z-index: -100;
     justify-content: center;
@@ -189,7 +189,7 @@ body {
 .contact {
     display: flex;
     flex-direction: column;
-    padding: 50px 0 30px 0;
+    padding: 3em 0 3em 0;
     margin-top: 50px;
     color: #777;
     background-color: #f1f1f1;
@@ -200,7 +200,7 @@ body {
     grid-template-columns: 1fr 1fr;
     width: 70%;
     margin-left: auto;
-    margin-right: 150px;
+    margin-right: 100px;
 }
 
 .contact p {
@@ -209,7 +209,6 @@ body {
 }
 
 .email h4 {
-    font-size: 30px;
     font-weight: bold;
     color: #777;
 }
@@ -219,9 +218,6 @@ body {
     flex-direction: column;
 }
 
-.sosmed h5 {
-    font-size: 24px;
-}
 
 span {
     padding: 8px;
@@ -256,3 +252,75 @@ span a {
 .fcc:hover {
     color: green;
 }
+
+.sosmed-mobile {
+    display: none;
+}
+
+/* Tab */
+@media screen and (min-width: 768px) and (max-width: 1250px) {
+    .works {
+        display: grid;
+        grid-gap: 40px;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 350px 350px;
+    }
+    .works a:last-child {
+        grid-column: initial;
+    }
+
+    .work {
+        grid-template-rows: 275px 75px;
+    }
+}
+
+/* Phone */
+@media only screen and (min-width: 320px) and (max-width: 767px){
+    .hello {
+        flex-direction: column;
+    }
+    ._hello {
+        margin-right: 0;
+    }
+    .hello-description {
+        border-left: none;
+        border-top: 6px solid #f2f2f2;
+        text-align: center;
+        padding: 0;
+        padding-top: 20px;
+    }
+    .works {
+        display: grid;
+        grid-gap: 80px;
+        grid-template-columns: 80%;
+        grid-template-rows: auto;
+    }
+    .works a:last-child {
+        grid-column: initial;
+    }
+    .work {
+        display: grid;
+        grid-template-rows: 225px 100px;
+        text-align: center;
+        border: 8px solid rgba(51, 189, 147, 0.6);
+        border-radius: 10px;
+        overflow: hidden;
+    }
+    .sosmed, .nav-bar li {
+        display: none;
+    }
+    .nav-bar li:nth-child(2) {
+        display: inline;
+    }
+    .contact-list {
+        display: flex;
+        flex-direction: column;
+        text-align:center;
+        margin: auto;
+    }
+    .sosmed-mobile {
+        display: flex;
+        justify-content: center;
+    }
+}
+
