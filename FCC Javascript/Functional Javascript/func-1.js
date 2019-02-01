@@ -77,4 +77,23 @@ var finalTabs = socialWindow
 // alert(finalTabs.tabs);
 // console.log(finalTabs);
 
-// 
+// * No. 4
+// * FP: avoid mutations and side effects using functional programming
+var fixedValue = 4;
+
+function incrementer() {
+    return fixedValue+1;
+} 
+
+var newValue = incrementer();
+console.log(fixedValue);
+console.log(newValue);
+
+// * No. 5
+// * FP: pass arguments to avoid external dependence in a function
+var fixedValue = 4;
+function incrementer(fixedValue) {
+    return fixedValue + 1;
+}
+var newValue = incrementer(fixedValue);
+console.log(fixedValue);
