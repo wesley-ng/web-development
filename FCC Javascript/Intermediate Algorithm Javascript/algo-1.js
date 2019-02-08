@@ -58,6 +58,34 @@ function destroyee(arr, ...args) {
 
 console.log(destroyee([1,2,3,1,2,3,4], 2, 3, 4));
 
+// * No. 4
+// * Algo: wherefore art thou
+function whatIsInAName(collection, source) {
+    let sourceKey = Object.keys(source);
+
+    return collection.filter(obj => {
+        console.log(obj);
+        return sourceKey.every(key => {
+            console.log(obj[key]);
+            console.log(source[key]);
+            return obj.hasOwnProperty(key) && obj[key] === source[key];
+        });
+    });
+}
+
+console.log(whatIsInAName([{
+    first: "Romeo",
+    last: "Montague"
+}, {
+    first: "Mercutio",
+    last: null
+}, {
+    first: "Tybalt",
+    last: "Capulet"
+}], {
+    last: "Capulet"
+}));
+
 // * No. 5
 // * Algo: spinal tap case
 function spinalCase(str) {
