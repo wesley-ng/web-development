@@ -124,3 +124,153 @@ function steamrollArray(arr) {
     }, []);
 }
 console.log(steamrollArray(["z", ["a"], [["b"]]]));
+
+// * No. 17
+// * Algo: binary agents
+function binaryToChar(str) {
+    return String.fromCharCode(parseInt(str,2));
+}
+function binaryAgent(str) {
+    let biner = str.split(" ");
+    let utf = [];
+    for (let i = 0; i < biner.length; i++) {
+        utf.push(binaryToChar(biner[i]));
+    }
+    return utf.join("");
+    // return String.fromCharCode(...str.split(" ").map(function(char){return parseInt(char, 2)}))
+}
+
+console.log(binaryAgent("01000001 01110010 01100101 01101110 00100111 01110100 00100000 01100010 01101111 01101110 01100110 01101001 01110010 01100101 01110011 00100000 01100110 01110101 01101110 00100001 00111111"));
+
+// * No. 18
+// * Algo: everything be true
+// * falsy or truthy
+function truthCheck(collection, pre) {
+    return collection.every(obj => {
+        return obj.hasOwnProperty(pre) && Boolean(obj[pre]);
+    });
+    // ? return collection.every(obj => obj[pre]);
+}
+
+console.log(truthCheck([{
+    "user": "Tinky-Winky",
+    "sex": "male"
+}, {
+    "user": "Dipsy",
+    "sex": "male"
+}, {
+    "user": "Laa-Laa",
+    "sex": "female"
+}, {
+    "user": "Po",
+    "sex": "female"
+}], "sex"));
+
+// * No. 19
+// * Algo: arguments optional
+function addTogether() {
+    let arg = [...arguments];
+
+    function checkNum (num) {
+        if (typeof num !== 'number') return undefined;
+        else return num;
+    }
+
+    if (arg.length > 1) {
+        let a = arg[0];
+        let b = arg[1];
+        if (checkNum(a) === undefined || checkNum(b) === undefined) {
+            return undefined; 
+        } 
+        return a + b;
+    }
+
+    if (arg.length === 1) {
+        let c = arg[0];
+        if (checkNum(c) === undefined) {
+            return undefined;
+        } else {
+            return function(d) {
+                if (checkNum(d) === undefined) {
+                    return undefined;
+                } else {
+                    return c + d;
+                }
+            };
+        }
+    }
+}
+
+console.log(addTogether(2,3));
+console.log(addTogether(2)(3));
+let num = addTogether(2);
+console.log(num(3));
+
+// * No. 20
+// * Algo: make a person
+let Person = function(firstAndLast) {
+    let name = firstAndLast.split(" ");
+    this.getFullName = function() {
+        return name.join(" ");
+    };
+    this.getFirstName = function() {
+        return name[0];
+    };
+    this.getLastName = function() {
+        return name[1];
+    };
+    this.setFirstName = function(first) {
+        name[0] = first;
+    };
+    this.setLastName = function(last) {
+        name[1] = last;
+    };
+    this.setFullName = function(firstAndLast) {
+        name = firstAndLast.split(" ");
+    };
+};
+
+let bob = new Person('Bob Ross');
+console.log(bob.getFullName());
+console.log(bob.getFirstName());
+console.log(bob.getLastName());
+bob.setFirstName('Haskell');
+console.log(bob.getFirstName());
+bob.setLastName("Rossy");
+console.log(bob.getLastName());
+console.log(bob.getFullName());
+bob.setFullName('Wesley Huang');
+console.log(bob.getFullName());
+console.log(bob.getFirstName());
+console.log(Object.keys(bob).length);
+
+// * No. 21
+// * Algo: map debris
+function orbitalPeriod(arr) {
+    
+    function orbitalEquation(avgAlt) {
+        const GM = 398600.4418; 
+        const earthRadius = 6367.4447;
+        const PI = Math.PI;
+        return Math.round(2 * PI * (Math.sqrt(
+            Math.pow(earthRadius + avgAlt, 3) / GM
+        )));
+    }
+
+    arr = arr.map(obj => {
+        return {"name": obj.name, "orbitalPeriod": orbitalEquation(obj.avgAlt)};
+    });
+    return arr;
+}
+
+console.log(orbitalPeriod([{name : "sputnik", avgAlt : 35873.5553}]));
+console.log(orbitalPeriod([{
+    name: "iss",
+    avgAlt: 413.6
+}, {
+    name: "hubble",
+    avgAlt: 556.7
+}, {
+    name: "moon",
+    avgAlt: 378632.553
+}]));
