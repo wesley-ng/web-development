@@ -1,0 +1,22 @@
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+.header {
+    background: url(Wish.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+}
+
+hr {
+    border-color: whitesmoke;
+    border-width: 3px;
+    max-width: 65px;
+}
+
+.btn-xl {
+    padding: 1em 1.5em;
+    border-radius: .5em;
+}
