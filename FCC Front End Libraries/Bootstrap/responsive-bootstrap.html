@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CatApp</title>
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" integrity="sha384-XdYbMnZ/QjLh6iI4ogqCTaIjrFk87ip+ekIjefZch0Y+PvJ8CDYtEs1ipDmPorQ+"
+        crossorigin="anonymous">
+
+    <!-- Challenge 10: ditch custom css for bootstrap -->
+    <style>
+        .thick-green-border {
+            border: 5px solid green;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <!-- Challenge 1: adding container fluid -->
+    <!-- div class container-fluid -->
+    <div class="container-fluid">
+        <!-- Challenge 3: center text with bootstrap -->
+        <!-- class text-center -->
+        <!-- Challenge 12: create a custom heading -->
+        <!-- div class row > div clas col-xs-8, col-xs-4 -->
+        <div class="row">
+            <div class="col-xs-8">
+                <h2 class="text-primary text-center">CatPhotoApp</h2>
+            </div>
+            <div class="col-xs-4">
+                <a href="#"><img class="img-responsive thick-green-border" src="https://bit.ly/fcc-relaxing-cat" alt="A cute orange cat lying on its back."></a>
+            </div>
+        </div>
+
+        <!-- Challenge 2: make images mobile responsive -->
+        <!-- class img-responsive -->
+        <a href="#"><img src="https://bit.ly/fcc-running-cats" alt="A cute cat is running" class="img-responsive thick-green-border"></a>
+        <!-- Challenge 9: use the bootstrap grid to put elements side by side -->
+        <!-- div class row > div class col-xs-4 * 3 -->
+        <div class="row">
+            <div class="col-xs-4">
+                <!-- Challenge 4: create a bootstrap button -->
+                <!-- Challenge 5: create a block element bootstrap button -->
+                <!-- Challenge 6: taste the bootstrap button color rainbow -->
+                <!-- class btn btn-default btn-block-->
+                <!-- class btn btn-primary btn-block -->
+                
+                <button class="btn btn-primary btn-block"><i class="fa fa-thumbs-up"></i> Like</button>
+            </div>
+            <div class="col-xs-4">
+                <!-- Challenge 7: call out optional actions with btn-info -->
+                <!-- class btn btn-info btn-block -->
+                
+                <button class="btn btn-info btn-block"><i class="fa fa-info-circle"></i> Info</button>
+            </div>
+            <div class="col-xs-4">
+                <!-- Challenge 8: warn your users of a dangerous action with btn-danger -->
+        
+                <button class="btn btn-danger btn-block"><i class="fa fa-trash"></i> Delete</button>
+            </div>
+        </div>
+        <!-- Challenge 11: use a span to target inline elements -->
+        <!-- span class text-danger -->
+<p>Things cats <span class="text-danger">love:</span></p>
+        <ul>
+            <li>cat nip</li>
+            <li>laser pointers</li>
+            <li>lasagna</li>
+        </ul>
+        <p>Top 3 things cats hate:</p>
+        <ol>
+            <li>flea treatment</li>
+            <li>thunder</li>
+            <li>other cats</li>
+        </ol>
+        <form action="/submit-cat-photo">
+            <!-- Challenge 13: responsively style radio buttons -->
+            <!-- div class row > div class col-xs-6 * 2 -->
+            <div class="row">
+                <div class="col-xs-6">
+                    <label><input type="radio" name="indoor-outdoor"> Indoor</label>
+                </div>
+                <div class="col-xs-6">
+                        <label><input type="radio" name="indoor-outdoor"> Outdoor</label>
+                </div>
+            </div>
+
+            <!-- Challenge 14: responsively style checkboxes -->
+            <!-- div class row > div class col-xs-4 -->
+            <div class="row">
+                <div class="col-xs-4">
+                    <label><input type="checkbox" name="personality"> Loving</label>
+                    
+                </div>
+                <div class="col-xs-4">
+                    <label><input type="checkbox" name="personality"> Lazy</label>
+                    
+                </div>
+                <div class="col-xs-4">
+                    <label><input type="checkbox" name="personality"> Crazy</label>
+                    
+                </div>
+            </div>
+            <!-- Challenge 16: line up form elements responsively with bootstrap -->
+            <!-- div class row > div class col-xs-7 + col-xs-5 -->
+            <div class="row">
+                <div class="col-xs-7">
+                    <!-- Challenge 15: style text inputs as form controls -->
+                    <!-- input class form-control -->
+                    <input class="form-control" type="text" placeholder="cat photo URL" required>
+
+                </div>
+                <div class="col-xs-5">
+                    <button class="btn btn-primary" type="submit"><i class="fa fa-paper-plane"></i> Submit</button>
+
+                </div>
+            </div>
+
+
+
+        </form>
+    </div>
+</body>
+</html>

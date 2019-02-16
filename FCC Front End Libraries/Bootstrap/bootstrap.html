@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bootstraping</title>
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" integrity="sha384-XdYbMnZ/QjLh6iI4ogqCTaIjrFk87ip+ekIjefZch0Y+PvJ8CDYtEs1ipDmPorQ+"
+        crossorigin="anonymous">
+</head>
+<body>
+    <!-- Challenge 18: house our page within a bootstrap container-fluid div -->
+    <!-- div container-fluid -->
+    <div class="container-fluid">
+            <!-- Challenge 17: create a bootstrap headline -->
+            <!-- h3 class text-center text-primary -->
+            <h3 class="text-primary text-center">jQuery Playground</h3>
+
+            <!-- Challenge 19: create a bootstrap row -->
+            <!-- div class row -->
+            <div class="row">
+                <!-- Challenge 20: split your bootstrap row -->
+                <!-- div class col-xs-6 -->
+                <!-- Challenge 28: label bootstrap buttons -->
+                <!-- every button has text #target*, here I use letter instead -->
+                <div class="col-xs-6">
+                    <!-- Challenge 21: create bootstrap wells -->
+                    <!-- class well => creae a visual sense of depth for your columns -->
+                    <h4>#left-well</h4>
+                    <div class="well" id="left-well">
+                        <!-- Challenge 22: add elements within your boostrap wells -->
+                        <!-- nest 3 buttons each well -->
+                        <!-- Challenge 23: apply the default bootstrap button style -->
+                        <!-- btn btn-default -->
+                        <!-- Challenge 24: create a class to target with jQuery selectors -->
+                        <!-- class target -->
+                        <button id="target1" class="btn btn-primary target">W</button>
+                        <button id="target2" class="btn btn-secondary target">E</button>
+                        <button id="target3" class="btn btn-success target">S</button>
+
+                    </div>
+                </div>
+                <div class="col-xs-6">
+                    <!-- Challenge 26: label bootstrap wells -->
+                    <!-- h4 #left-well #right-well -->
+
+                    <h4>#right-well</h4>
+
+                    <!-- Challenge 25: add id attributes to bootstrap elements -->
+                    <!-- div id left-well right-well-->
+                    <!-- Challenge 27: give each element a unique id -->
+                    <!-- every button has id target-* (number) -->
+                    <div class="well" id="right-well">
+                        <button id="target4" class="btn btn-info target">L</button>
+                        <button id="target5" class="btn btn-warning target">E</button>
+                        <button id="target6" class="btn btn-danger target">Y</button>
+                    </div>
+                </div>
+            </div>        
+    </div>
+</body>
+</html>
+<!-- Challenge 29: use comments to clarify -->
+<!-- Only change code above here -->
