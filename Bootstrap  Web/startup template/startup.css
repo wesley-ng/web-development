@@ -8,7 +8,7 @@ html, body {
 .header {
     background: linear-gradient(180deg, rgba(7, 7, 7, 0.5) 0%, rgba(180, 176, 176, 0.15) 100%),
     url(Wish.jpg);
-    background-size: cover;
+    background-size: covhttp: //er;
     background-position: center;
     height: 100%; 
 }
