@@ -3,6 +3,14 @@ let database = [
     {
         username: "wesley",
         password: "goodmorning"
+    },
+    {
+        username: "anne",
+        password: "wesley"
+    },
+    {
+        username: "xanders",
+        password: "007"
     }
 ];
 
@@ -17,11 +25,20 @@ let newsFeed = [
     }
 ];
 
+function isUserValid(user, pass) {
+    for (var i = 0; i < database.length; i++) {
+        if (user === database[i]["username"] && pass === database[i]["password"]) {
+            return true;
+        } 
+    }
+    return false;
+}
+
 function signIn(user, pswd) {
-    if (user === database[0]["username"] && pswd === database[0]["password"]) {
+    if (isUserValid(user, pswd)) {
         console.log(newsFeed);
     } else {
-        alert("Sorry, wrong username and password!");
+        alert("Wrong username and password!");
     }
 }
 
