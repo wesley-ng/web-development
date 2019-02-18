@@ -36,7 +36,7 @@ function isUserValid(user, pass) {
 
 function signIn(user, pswd) {
     if (isUserValid(user, pswd)) {
-        console.log(newsFeed);
+        console.log(newsFeed    );
     } else {
         alert("Wrong username and password!");
     }

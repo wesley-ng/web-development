@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Scripting</title>
+    <link rel="stylesheet" href="../script/index.css">
+</head>
+<body>
+    <!-- First Challenge -->
+    <section class="container">
+        <img src="../images/normal.png" alt="Normal Image" id="myImage">
+        <p onclick="blooming()" id="name">
+            Wesley  
+        </p>
+    </section>
+    <!-- Second Challenge -->
+    <section class="containering" onclick="newStyle()">
+        <p class="centered" id="logo">WeltX</p>
+    </section>
+</body>
+<!-- Internal script -->
+<script>
+    function blooming() {
+        var image = document.getElementById('myImage');
+        var p = document.getElementById('name');
+        if (image.src.match('normal')) {
+            image.src = "../images/flower.png";
+            p.innerText = "Wesley";
+            p.style.color = "Green";
+        } else {
+            image.src = "../images/normal.png";
+            p.innerText = "Wesley";
+            p.style.color = "inherit";
+        }
+    }
+</script>
+<!-- External script -->
+<!-- defer is used to defer the execution until the whole HTML parsed -->
+<script src="../script/index.js" defer></script>
+<!-- async is similar with defer, but the script will not wait until the entire page is parsed, it will execute immediately after it has been downloaded -->
+<script src="../script/index.js" async></script>
+</html>
