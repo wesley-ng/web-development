@@ -1,6 +1,9 @@
 let doorImage1 = document.getElementById('door1');
 let doorImage2 = document.getElementById('door2');
 let doorImage3 = document.getElementById('door3');
+let currentStreak = document.getElementById('current');
+let bestStreak = document.getElementById('best');
+
 
 let botDoorPath = "https://s3.amazonaws.com/codecademy-content/projects/chore-door/images/robot.svg";
 let beachDoorPath = "https://s3.amazonaws.com/codecademy-content/projects/chore-door/images/beach.svg";
@@ -11,6 +14,8 @@ let startButton = document.getElementById('start');
 let currentlyPlaying = true;
 let numClosedDoors = 3;
 let openDoor1, openDoor2, openDoor3;
+let currentScore = 0, bestScore = 0;
+
 
 // generate position of bot door
 let randomChoreDoorGenerator = () => {
@@ -47,8 +52,14 @@ let isClicked = (door) => {
 let gameOver = (status) => {
     if (status === 'win') {
         startButton.innerHTML = 'You win! Play again';
+        bestScore++;
+        bestStreak.innerHTML = `${bestScore}`;
     } else {
         startButton.innerHTML = 'Game over! Play again?';
+        currentScore = 0;
+        currentStreak.innerHTML = `${currentScore}`;
+        bestScore = 0;
+        bestStreak.innerHTML = `${bestScore}`;
     }
     currentlyPlaying = false;
 };
@@ -65,6 +76,7 @@ let isBot = (door) => {
 let playDoor = (door) => {
     // every door clicked will result to the remaining closed door
     numClosedDoors--;
+    currentScore++;
     // if all the doors have been opened which mean we don't find bot
     if (numClosedDoors === 0) {
         gameOver('win');
@@ -90,6 +102,8 @@ let startRound = () => {
     numClosedDoors = 3;
     startButton.innerHTML = 'Good luck!';
     currentlyPlaying = true;
+    currentScore = 0;
+    currentStreak.innerHTML = `${currentScore}`;
     randomChoreDoorGenerator();
 };
 
@@ -98,6 +112,7 @@ door1.onclick = () => {
     if (currentlyPlaying && !isClicked(doorImage1)) {
         doorImage1.src = openDoor1;
         playDoor(door1);
+        currentStreak.innerHTML = `${currentScore}`;
     }
 };
 
@@ -105,12 +120,14 @@ door2.onclick = () => {
     if (currentlyPlaying && !isClicked(doorImage2)) {
         doorImage2.src = openDoor2;
         playDoor(door2);
+        currentStreak.innerHTML = `${currentScore}`;
     }
 };
 door3.onclick = () => {
     if (currentlyPlaying && !isClicked(doorImage3)) {
         doorImage3.src = openDoor3;
         playDoor(door3);
+        currentStreak.innerHTML = `${currentScore}`;
     }
 };
 
