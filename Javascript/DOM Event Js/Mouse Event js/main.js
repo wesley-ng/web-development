@@ -27,6 +27,7 @@ itemTwo.onmouseup = () => {
     itemTwo.style.backgroundColor = "tomato";
 };
 
+
 // Write code for the third list item
 itemThree.onmouseout = () => {
     itemThree.innerHTML = "The mouse has left the element.";
