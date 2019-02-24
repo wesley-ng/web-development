@@ -10,9 +10,12 @@
     <script id="languagesTemp" type="text/x-handlebars-template">
         {{#each languages}}
             <div class="card">
-                <p>I should learn {{this.name}}</p>
+                {{#if this.modern}}
+                    <p>I should learn {{this.name}}.</p>
+                {{else}}
+                    <p>When I have time, I'll learn {{this.name}}</p>
+                {{/if}}    
             </div>
-
         {{/each}}
     </script>
 </head>
