@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel='stylesheet' type='text/css' href='style.css'>
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(() => {
+            $('.hide-button').on('click', () =>{
+                $('.first-image').hide();
+            });
+            $('.show-button').on('click', () => {
+                $('.first-image').show();           
+            });
+            $('.toggle-button').on('click', () => {
+                $('.first-image').toggle();
+            });
+            // fade
+            $('.fadein-button').on('click', () => {
+                $('.fade-image').fadeIn(4000);
+            });
+            $('.fadeout-button').on('click', () => {
+                $('.fade-image').fadeOut(500);
+            });
+            $('.fadetoggle-button').on('click', () => {
+                $('.fade-image').fadeToggle('fast');
+            })
+            // slide
+            $('.slideup-button').on('click', () => {
+                $('.slide-image').slideUp(100);
+            });
+            $('.slidedown-button').on('click', () => {
+                $('.slide-image').slideDown('slow');
+            });
+            $('.slidetoggle-button').on('click', () => {
+                $('.slide-image').slideToggle(400);
+            });
+        });
+    
+    </script>
+</head>
+
+<body>
+
+    <table align='center'>
+        <tr>
+            <th class='header-small'>
+                <div class='header-text'>Buttons</div>
+            </th>
+            <th class='header-big'>
+                <div class='image-text'>Images</div>
+            </th>
+        </tr>
+
+        <tr>
+            <th class='button-col'>
+                <button class="hide-button">
+                    <div class='button-text'>HIDE</div>
+                </button>
+            </th>
+            <th rowspan=3 class='img-col'>
+                <img src="https://s3.amazonaws.com/codecademy-content/courses/jquery/effects/veggies.jpg"
+                    class="first-image">
+            </th>
+        </tr>
+        <tr>
+            <th class='button-col'>
+                <button class="show-button">
+                    <div class='button-text'>SHOW</div>
+                </button>
+            </th>
+        </tr>
+        <tr>
+            <th class='button-col'>
+                <button class="toggle-button">
+                    <div class='button-text'>TOGGLE</div>
+                </button>
+            </th>
+        </tr>
+        <tr>
+            <th class="button-col">
+                <button class="fadein-button">
+                    <div class="button-text">FADE IN</div>
+                </button>
+            </th>
+            <th rowspan="3" class="img-col"><img src="https://s3.amazonaws.com/codecademy-content/courses/jquery/effects/photo_2.jpg" alt="Fade Image" class="fade-image"></th>
+        </tr>
+        <tr>
+            <th class="button-col">
+                <button class="fadeout-button">
+                    <div class="button-text">FADE OUT</div>
+                </button>
+            </th>
+        </tr>
+        <tr>
+            <th class="button-col">
+                <button class="fadetoggle-button">
+                    <div class="button-text">TOGGLE FADE</div>
+                </button>
+            </th>
+        </tr>
+        <!-- Slide Zone -->
+        <tr>
+            <th class="button-col">
+                <button class="slideup-button">
+                    <div class="button-text">SLIDE UP</div>
+                </button>
+            </th>
+            <th rowspan="3" class="img-col"><img src="https://s3.amazonaws.com/codecademy-content/courses/jquery/effects/photo_3.jpg" alt="" class="slide-image"></th>
+        </tr>
+        <tr>
+            <th class="button-col">
+                <button class="slidedown-button">
+                    <div class="button-text">SLIDE DOWN</div>
+                </button>
+            </th>
+        </tr>
+        <tr>
+            <th class="button-col">
+                <button class="slidetoggle-button">
+                    <div class="button-text">TOGGLE SLIDE</div>
+                </button>
+            </th>
+        </tr>
+    </table>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src='js/main.js'></script>
+
+
+</body>
+
+</html>
