@@ -1,4 +1,6 @@
 {
+    "editor.tabCompletion": "on",
+    "editor.snippetSuggestions": "top",
     "liveServer.settings.ChromeDebuggingAttachment": true,
     "liveServer.settings.AdvanceCustomBrowserCmdLine": "/usr/bin/chromium-browser --remote-debugging-port=9222",
     "editor.fontSize": 16,
