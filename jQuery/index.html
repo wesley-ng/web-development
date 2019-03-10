@@ -9,18 +9,35 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script>
         $(document).ready(function() {
-            // Show Login form
-            $(".login-button").on('click', () => {
-                $(".login-form").slideToggle();
-                $(".nav-menu").hide();
+            $('.login-button').on('click', () => {
+                $('.login-form').toggle();
             });
-            // Show Menu form
-            const $navDropdown = $('#nav-dropdown');
-            const $menuButton = $(".menu-button");
-            $menuButton.on('click', () => {
-                $navDropdown.slideToggle();
-                $(".login-form").hide();
-            }); 
+
+            $('.menu-button').on('mouseenter', () => {
+                $('.nav-menu').show();
+                $('.menu-button').css({
+                    color: '#C3FF00',
+                    backgroundColor: '#535353'
+                }).animate({ fontSize: '24px' }, 200);
+            })
+            // when you leave nav menu, it hides the menu
+            $('.nav-menu').on('mouseleave', () => {
+                $('.nav-menu').hide();
+                $('.menu-button').css({
+                    color: '#EFEFEF',
+                    backgroundColor: '#303030'
+                }).animate({ fontSize: '18px' }, 200);
+            });
+
+            // Shorter version
+            // Have a class ready with its css and use toggleClass
+            // 
+            // $('.menu-button').on('click', () => {
+            //     $('.nav-menu').toggleClass('hide');
+            //     $('.menu-button').toggleClass('button-active');
+            // });
+            
+
             // Show detail of product
             // First shoes
             $('.arrow-one').on('click', () => {
